@@ -1,0 +1,233 @@
+2015-08-19 14:43:14,964 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@643b1d11: startup date [Wed Aug 19 14:43:14 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2015-08-19 14:43:15,825 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2015-08-19 14:43:15,851 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:43:16,081 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-34938-1439991795959-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:43:16,106 | INFO  | Listening for connections at: tcp://lnz123701n02:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:43:16,109 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:43:16,119 | INFO  | Listening for connections at: amqp://lnz123701n02:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:43:16,122 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:43:16,127 | INFO  | Listening for connections at: stomp://lnz123701n02:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:43:16,130 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:43:16,135 | INFO  | Listening for connections at: mqtt://lnz123701n02:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:43:16,142 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:43:16,290 | INFO  | Listening for connections at ws://lnz123701n02:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2015-08-19 14:43:16,291 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:43:16,292 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-34938-1439991795959-0:1) started | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:43:16,293 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:43:16,692 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:43:16,694 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:43:16,756 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2015-08-19 14:43:17,011 | INFO  | jolokia-agent: No access restrictor found at classpath:/jolokia-access.xml, access to all MBeans is allowed | /api | main
+2015-08-19 14:45:58,475 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-34938-1439991795959-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,479 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,483 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,484 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,485 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,549 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,553 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,553 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,554 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,555 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,952 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-34938-1439991795959-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,953 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-34938-1439991795959-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,954 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@643b1d11: startup date [Wed Aug 19 14:43:14 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2015-08-19 14:45:58,970 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2015-08-19 14:48:53,877 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@643b1d11: startup date [Wed Aug 19 14:48:53 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2015-08-19 14:48:54,707 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2015-08-19 14:48:54,732 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:48:54,926 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2015-08-19 14:48:54,943 | INFO  | Recovering from the journal @1:509 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2015-08-19 14:48:54,948 | INFO  | Recovery replayed 33 operations from the journal in 0.016 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2015-08-19 14:48:55,095 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55200-1439992134978-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:48:55,112 | INFO  | Listening for connections at: tcp://lnz123701n02:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:48:55,114 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:48:55,120 | INFO  | Listening for connections at: amqp://lnz123701n02:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:48:55,123 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:48:55,127 | INFO  | Listening for connections at: stomp://lnz123701n02:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:48:55,130 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:48:55,136 | INFO  | Listening for connections at: mqtt://lnz123701n02:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:48:55,139 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:48:55,481 | INFO  | Listening for connections at ws://lnz123701n02:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2015-08-19 14:48:55,482 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:48:55,485 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55200-1439992134978-0:1) started | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:48:55,486 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:48:55,862 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:48:55,863 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:48:55,912 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2015-08-19 14:48:56,112 | INFO  | jolokia-agent: No access restrictor found at classpath:/jolokia-access.xml, access to all MBeans is allowed | /api | main
+2015-08-19 14:49:39,131 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55200-1439992134978-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,133 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,135 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,136 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,137 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,201 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,204 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,205 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,205 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,206 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,555 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55200-1439992134978-0:1) uptime 44.842 seconds | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,556 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55200-1439992134978-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,556 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@643b1d11: startup date [Wed Aug 19 14:48:53 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2015-08-19 14:49:39,572 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2015-08-19 14:49:57,598 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@643b1d11: startup date [Wed Aug 19 14:49:57 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2015-08-19 14:49:58,384 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2015-08-19 14:49:58,412 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:49:58,594 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2015-08-19 14:49:58,606 | INFO  | Recovering from the journal @1:4917 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2015-08-19 14:49:58,608 | INFO  | Recovery replayed 9 operations from the journal in 0.01 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2015-08-19 14:49:58,755 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55044-1439992198633-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:49:58,772 | INFO  | Listening for connections at: tcp://lnz123701n02:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:49:58,774 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:49:58,779 | INFO  | Listening for connections at: amqp://lnz123701n02:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:49:58,783 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:49:58,789 | INFO  | Listening for connections at: stomp://lnz123701n02:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:49:58,792 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:49:58,797 | INFO  | Listening for connections at: mqtt://lnz123701n02:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:49:58,800 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:49:58,923 | INFO  | Listening for connections at ws://lnz123701n02:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2015-08-19 14:49:58,923 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:49:58,926 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55044-1439992198633-0:1) started | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:49:58,928 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:49:59,302 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:49:59,302 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:49:59,350 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2015-08-19 14:49:59,542 | INFO  | jolokia-agent: No access restrictor found at classpath:/jolokia-access.xml, access to all MBeans is allowed | /api | main
+2015-08-19 14:52:32,962 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55044-1439992198633-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-25
+2015-08-19 14:52:32,965 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2015-08-19 14:52:32,966 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2015-08-19 14:52:32,969 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2015-08-19 14:52:32,971 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2015-08-19 14:52:33,035 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-25
+2015-08-19 14:52:33,039 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-25
+2015-08-19 14:52:33,039 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-25
+2015-08-19 14:52:33,040 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-25
+2015-08-19 14:52:33,041 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-25
+2015-08-19 14:52:33,121 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55044-1439992198633-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | Thread-25
+2015-08-19 14:52:33,122 | INFO  | Apache ActiveMQ 5.12.0 (localhost, ID:lnz123701n02-55044-1439992198633-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-25
+2015-08-19 14:52:33,123 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@643b1d11: startup date [Wed Aug 19 14:49:57 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-25
+2015-08-19 14:52:33,139 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-25
+2015-08-19 14:55:51,279 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@3a82f6ef: startup date [Wed Aug 19 14:55:51 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2015-08-19 14:55:52,892 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/activemq-data/amq-broker/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2015-08-19 14:55:52,910 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/data/dynamic-broker1/kahadb] | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:55:53,122 | INFO  | Apache ActiveMQ 5.12.0 (amq-broker, ID:lnz123701n02-40064-1439992553001-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:55:53,141 | INFO  | Listening for connections at: tcp://lnz123701n02.local:61616 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:55:53,145 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:55:53,409 | INFO  | Listening for connections at: ssl://lnz123701n02.local:61617 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:55:53,409 | INFO  | Connector ssl started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:55:53,412 | INFO  | Listening for connections at: stomp://lnz123701n02.local:61613 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2015-08-19 14:55:53,412 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:55:53,510 | INFO  | Listening for connections at ws://lnz123701n02.local:61614/ | org.apache.activemq.transport.ws.WSTransportServer | main
+2015-08-19 14:55:53,510 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:55:53,511 | INFO  | Apache ActiveMQ 5.12.0 (amq-broker, ID:lnz123701n02-40064-1439992553001-0:1) started | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:55:53,511 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2015-08-19 14:55:54,115 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:55:54,115 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2015-08-19 14:55:54,180 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2015-08-19 14:55:54,418 | INFO  | jolokia-agent: No access restrictor found at classpath:/jolokia-access.xml, access to all MBeans is allowed | /api | main
+2015-08-19 14:55:54,543 | INFO  | Apache Camel 2.15.2 (CamelContext: camel) is starting | org.apache.camel.spring.SpringCamelContext | main
+2015-08-19 14:55:54,544 | INFO  | JMX is enabled | org.apache.camel.management.ManagedManagementStrategy | main
+2015-08-19 14:55:54,649 | INFO  | Loaded 186 type converters | org.apache.camel.impl.converter.DefaultTypeConverter | main
+2015-08-19 14:55:54,766 | INFO  | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance. | org.apache.camel.spring.SpringCamelContext | main
+2015-08-19 14:55:54,766 | INFO  | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html | org.apache.camel.spring.SpringCamelContext | main
+2015-08-19 14:55:54,829 | INFO  | Connector vm://amq-broker started | org.apache.activemq.broker.TransportConnector | main
+2015-08-19 14:55:54,865 | INFO  | Route: route1 started and consuming from: Endpoint[activemq://example.A] | org.apache.camel.spring.SpringCamelContext | main
+2015-08-19 14:55:54,865 | INFO  | Total 1 routes, of which 1 is started. | org.apache.camel.spring.SpringCamelContext | main
+2015-08-19 14:55:54,871 | INFO  | Apache Camel 2.15.2 (CamelContext: camel) started in 0.323 seconds | org.apache.camel.spring.SpringCamelContext | main
+2015-08-19 14:56:20,479 | WARN  | Broker localhost not started so using amq-broker instead | org.apache.activemq.broker.BrokerRegistry | qtp257718694-43
+2015-08-19 14:56:20,479 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp257718694-43
+2015-08-19 14:56:37,779 | INFO  | PortfolioPublishServlet: Sending: <price stock='IBMW' bid='32.778003326223036' offer='32.81078132954926' movement='down'/> on destination: topic://STOCKS.IBMW | /demo | qtp257718694-46
+2015-08-19 14:56:39,825 | INFO  | PortfolioPublishServlet: Sending: <price stock='IBMW' bid='33.06251008020226' offer='33.09557259028246' movement='up'/> on destination: topic://STOCKS.IBMW | /demo | qtp257718694-46
+2015-08-19 14:56:41,870 | INFO  | PortfolioPublishServlet: Sending: <price stock='SUNW' bid='9.313198751275058' offer='9.322511950026332' movement='down'/> on destination: topic://STOCKS.SUNW | /demo | qtp257718694-46
+2015-08-19 14:56:43,944 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.560999208810609' offer='12.573560208019417' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-42
+2015-08-19 14:56:45,991 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='39.96216453557844' offer='40.00212670011401' movement='down'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-47
+2015-08-19 14:56:53,171 | WARN  | Broker localhost not started so using amq-broker instead | org.apache.activemq.broker.BrokerRegistry | qtp257718694-46
+2015-08-19 14:57:05,009 | INFO  | PortfolioPublishServlet: Sending: <price stock='SUNW' bid='9.356608391733808' offer='9.36596500012554' movement='up'/> on destination: topic://STOCKS.SUNW | /demo | qtp257718694-42
+2015-08-19 14:57:07,081 | INFO  | PortfolioPublishServlet: Sending: <price stock='IBMW' bid='33.35341147023355' offer='33.38676488170378' movement='up'/> on destination: topic://STOCKS.IBMW | /demo | qtp257718694-45
+2015-08-19 14:57:09,134 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.641547821844314' offer='12.654189369666158' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-45
+2015-08-19 14:57:11,186 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.679212113189697' offer='12.691891325302885' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-45
+2015-08-19 14:57:13,241 | INFO  | PortfolioPublishServlet: Sending: <price stock='SUNW' bid='9.314015667006615' offer='9.32332968267362' movement='down'/> on destination: topic://STOCKS.SUNW | /demo | qtp257718694-45
+2015-08-19 14:57:15,299 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.688354304371419' offer='12.701042658675789' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-45
+2015-08-19 14:57:17,352 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.679597209444669' offer='12.692276806654112' movement='down'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-45
+2015-08-19 14:57:19,410 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='40.19295777717273' offer='40.233150734949895' movement='up'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-42
+2015-08-19 14:57:21,466 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.74866598742392' offer='12.761414653411341' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-42
+2015-08-19 14:57:23,527 | INFO  | PortfolioPublishServlet: Sending: <price stock='IBMW' bid='33.60226007653974' offer='33.63586233661628' movement='up'/> on destination: topic://STOCKS.IBMW | /demo | qtp257718694-42
+2015-08-19 14:57:25,584 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.834156216507049' offer='12.846990372723555' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-42
+2015-08-19 14:57:27,659 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='40.09239832057941' offer='40.13249071889999' movement='down'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-42
+2015-08-19 14:57:29,730 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.735711925128767' offer='12.748447637053895' movement='down'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-42
+2015-08-19 14:57:31,778 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='39.91819736358877' offer='39.95811556095235' movement='down'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-42
+2015-08-19 14:57:33,837 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='39.72807639967725' offer='39.767804476076925' movement='down'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-42
+2015-08-19 14:57:35,881 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='39.88251556281013' offer='39.922398078372936' movement='up'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-42
+2015-08-19 14:57:37,933 | INFO  | PortfolioPublishServlet: Sending: <price stock='SUNW' bid='9.22351728894443' offer='9.232740806233373' movement='down'/> on destination: topic://STOCKS.SUNW | /demo | qtp257718694-42
+2015-08-19 14:57:39,994 | INFO  | PortfolioPublishServlet: Sending: <price stock='SUNW' bid='9.3130634468056' offer='9.322376510252404' movement='up'/> on destination: topic://STOCKS.SUNW | /demo | qtp257718694-45
+2015-08-19 14:57:42,046 | INFO  | PortfolioPublishServlet: Sending: <price stock='IBMW' bid='33.44466922352156' offer='33.47811389274508' movement='down'/> on destination: topic://STOCKS.IBMW | /demo | qtp257718694-45
+2015-08-19 14:57:44,095 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.826553381639233' offer='12.83937993502087' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-45
+2015-08-19 14:57:46,148 | INFO  | PortfolioPublishServlet: Sending: <price stock='MSFT' bid='39.57933433441249' offer='39.6189136687469' movement='down'/> on destination: topic://STOCKS.MSFT | /demo | qtp257718694-45
+2015-08-19 14:57:48,204 | INFO  | PortfolioPublishServlet: Sending: <price stock='BEAS' bid='12.850094942005326' offer='12.86294503694733' movement='up'/> on destination: topic://STOCKS.BEAS | /demo | qtp257718694-45
+2015-08-19 14:57:50,261 | INFO  | PortfolioPublishServlet: Sending: <price stock='SUNW' bid='9.35228291094611' offer='9.361635193857055' movement='up'/> on destination: topic://STOCKS.SUNW | /demo | qtp257718694-45
+2015-08-19 14:57:53,207 | INFO  | Apache ActiveMQ 5.12.0 (amq-broker, ID:lnz123701n02-40064-1439992553001-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,208 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,208 | INFO  | Connector ssl stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,209 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,271 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,274 | INFO  | Connector vm://amq-broker stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,275 | WARN  | Setup of JMS message listener invoker failed for destination 'example.A' - trying to recover. Cause: peer (vm://amq-broker#1) stopped. | org.apache.camel.component.jms.DefaultJmsMessageListenerContainer | Camel (camel) thread #0 - JmsConsumer[example.A]
+2015-08-19 14:57:53,276 | ERROR | Could not refresh JMS Connection for destination 'example.A' - retrying in 5000 ms. Cause: Could not create Transport. Reason: java.io.IOException: Broker named 'amq-broker' does not exist. | org.apache.camel.component.jms.DefaultJmsMessageListenerContainer | Camel (camel) thread #0 - JmsConsumer[example.A]
+2015-08-19 14:57:53,279 | INFO  | PListStore:[/home/mkopp/Documents/Ruxit/github/jmx-plugins/ActiveMQ/apache-activemq-5.12.0/activemq-data/amq-broker/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,279 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,279 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,279 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,560 | INFO  | Apache ActiveMQ 5.12.0 (amq-broker, ID:lnz123701n02-40064-1439992553001-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,560 | INFO  | Apache ActiveMQ 5.12.0 (amq-broker, ID:lnz123701n02-40064-1439992553001-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,561 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@3a82f6ef: startup date [Wed Aug 19 14:55:51 GMT+01:00 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,561 | INFO  | Apache Camel 2.15.2 (CamelContext: camel) is shutting down | org.apache.camel.spring.SpringCamelContext | ActiveMQ ShutdownHook
+2015-08-19 14:57:53,561 | INFO  | Starting to graceful shutdown 1 routes (timeout 300 seconds) | org.apache.camel.impl.DefaultShutdownStrategy | ActiveMQ ShutdownHook
+2015-08-19 14:57:58,280 | INFO  | Route: route1 shutdown complete, was consuming from: Endpoint[activemq://example.A] | org.apache.camel.impl.DefaultShutdownStrategy | Camel (camel) thread #1 - ShutdownTask
+2015-08-19 14:57:58,280 | INFO  | Graceful shutdown of 1 routes completed in 4 seconds | org.apache.camel.impl.DefaultShutdownStrategy | ActiveMQ ShutdownHook
+2015-08-19 14:57:58,286 | INFO  | Apache Camel 2.15.2 (CamelContext: camel) uptime 2 minutes | org.apache.camel.spring.SpringCamelContext | ActiveMQ ShutdownHook
+2015-08-19 14:57:58,287 | INFO  | Apache Camel 2.15.2 (CamelContext: camel) is shutdown in 4.725 seconds | org.apache.camel.spring.SpringCamelContext | ActiveMQ ShutdownHook
+2015-08-19 14:57:58,311 | ERROR | Error in thread 'ActiveMQ VMTransport: vm://localhost#3-5' | org.apache.activemq.thread.TaskRunnerFactory | ActiveMQ VMTransport: vm://localhost#3-5
+org.apache.activemq.broker.BrokerStoppedException: Broker BrokerService[amq-broker] is being stopped
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:193)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.ResponseCorrelator.onCommand(ResponseCorrelator.java:116)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.vm.VMTransport.iterate(VMTransport.java:270)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)[activemq-client-5.12.0.jar:5.12.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_51]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_51]
+2015-08-19 14:57:58,311 | ERROR | Error in thread 'ActiveMQ VMTransport: vm://localhost#3-2' | org.apache.activemq.thread.TaskRunnerFactory | ActiveMQ VMTransport: vm://localhost#3-2
+org.apache.activemq.broker.BrokerStoppedException: Broker BrokerService[amq-broker] is being stopped
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:193)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.ResponseCorrelator.onCommand(ResponseCorrelator.java:116)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.vm.VMTransport.iterate(VMTransport.java:270)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)[activemq-client-5.12.0.jar:5.12.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_51]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_51]
+2015-08-19 14:57:58,311 | ERROR | Error in thread 'ActiveMQ VMTransport: vm://localhost#3-3' | org.apache.activemq.thread.TaskRunnerFactory | ActiveMQ VMTransport: vm://localhost#3-3
+org.apache.activemq.broker.BrokerStoppedException: Broker BrokerService[amq-broker] is being stopped
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:193)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.ResponseCorrelator.onCommand(ResponseCorrelator.java:116)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.vm.VMTransport.iterate(VMTransport.java:270)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)[activemq-client-5.12.0.jar:5.12.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_51]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_51]
+2015-08-19 14:58:13,309 | WARN  | Transport Connection to: vm://localhost#2 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://localhost#2) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2015-08-19 14:58:13,310 | ERROR | Error in thread 'ActiveMQ VMTransport: vm://localhost#3-7' | org.apache.activemq.thread.TaskRunnerFactory | ActiveMQ VMTransport: vm://localhost#3-7
+org.apache.activemq.broker.BrokerStoppedException: Broker BrokerService[amq-broker] is being stopped
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:193)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.ResponseCorrelator.onCommand(ResponseCorrelator.java:116)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.transport.vm.VMTransport.iterate(VMTransport.java:270)[activemq-broker-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133)[activemq-client-5.12.0.jar:5.12.0]
+	at org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48)[activemq-client-5.12.0.jar:5.12.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_51]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_51]
+2015-08-19 14:58:13,313 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook

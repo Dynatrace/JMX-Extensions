@@ -1,0 +1,279 @@
+{
+  "version": "1.70.0.20150422-141900",
+  "name": "jmx.ActiveMQ",
+  "type": "JMX",
+  "processType": 7,
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "metrics": [
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "Topic.AverageMessageSize",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "AverageMessageSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "AVERAGE",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "Topic.ConsumerCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "ConsumerCount",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "DequeueCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "DequeueCount",
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "DispatchCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "DispatchCount",
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "EnqueueCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "EnqueueCount",
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "InFlightCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "InFlightCount",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "ExpiredCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "ExpiredCount",
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "ProducerCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "ProducerCount",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    },
+    {
+      "entity": "PROCESS_GROUP_INSTANCE",
+      "timeseries": {
+        "key": "QueueSize",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "destinationName"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq",
+        "keyProperties": {
+          "type": "Broker",
+          "brokerName": "localhost",
+          "destinationType": "Topic",
+          "destinationName": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "QueueSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "destinationName",
+          "type": "keyProperty",
+          "keyProperty": "destinationName"
+        }
+      }
+    }
+  ]
+}
