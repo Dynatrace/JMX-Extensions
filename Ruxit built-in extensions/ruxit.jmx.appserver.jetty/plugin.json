@@ -1,0 +1,256 @@
+
+{
+  "version" : "1.790",
+  "name" : "ruxit.jmx.appserver.jetty",
+  "type" : "JMX",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "processTypes":[10],
+  "metrics" : [
+    {
+      "timeseries" :
+      {
+        "key" : "busyThreads",
+        "unit" : "Count",
+        "dimensions" : [
+          "rx_pid"
+        ]
+      },
+      "source" : {
+        "domain": "org.eclipse.jetty.util.thread",
+        "keyProperties": {
+          "type": "queuedthreadpool",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "busyThreads",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries" :
+      {
+        "key" : "idleThreads",
+        "unit" : "Count",
+        "dimensions" : [
+          "rx_pid"
+        ]
+      },
+      "source" : {
+        "domain": "org.eclipse.jetty.util.thread",
+        "keyProperties": {
+          "type": "queuedthreadpool",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "idleThreads",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+       }
+    },
+    {
+      "timeseries": {
+        "key": "queueSize",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.eclipse.jetty.util.thread",
+        "keyProperties": {
+          "type": "queuedthreadpool",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "queueSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "requestCount",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.eclipse.jetty.server.handler",
+        "keyProperties": {
+          "type": "statisticshandler",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "requests",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "responsesBytesTotal",
+        "unit": "BytePerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.eclipse.jetty.server.handler",
+        "keyProperties": {
+          "type": "statisticshandler",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "responsesBytesTotal",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "connections",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.eclipse.jetty.server",
+        "keyProperties": {
+          "context": "*",
+          "type": "connectorstatistics",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "connections",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "connectionsOpen",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.eclipse.jetty.server",
+        "keyProperties": {
+          "context": "*",
+          "type": "connectorstatistics",
+          "id": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "connectionsOpen",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    }
+  ],
+  "ui" :
+  {
+    "keymetrics" : [
+      {
+        "key" : "requestCount",
+        "aggregation" : "avg",
+        "mergeaggregation" : "sum",
+        "displayname" : "Requests"
+      }
+    ],
+    "keycharts" : [
+      {
+        "title" : "Jetty web requests",
+		"group" : "Jetty metrics",
+        "series" : [
+          {
+            "key" : "requestCount",
+            "displayname" : "Requests",
+            "rightaxis" : true,
+            "color" : "rgba(101,152,186,0.4)",
+            "seriestype" : "bar",
+            "mergeaggregation" : "sum"
+          },
+          {
+            "key" : "responsesBytesTotal",
+            "displayname" : "Response size",
+            "seriestype" : "area",
+            "mergeaggregation" : "sum"
+          }
+        ]
+      }
+    ],
+    "charts" : [
+      {
+        "group" : "Jetty Traffic",
+        "title" : "Requests",
+        "series" : [
+          {
+            "key" : "requestCount",
+            "displayname" : "Requests",
+            "rightaxis" : true,
+            "color" : "rgba(101,152,186,0.4)",
+            "seriestype" : "bar"
+          },
+          {
+            "key" : "responsesBytesTotal",
+            "displayname" : "Response size",
+            "seriestype" : "area"
+          }
+        ]
+      },
+      {
+        "group" : "Jetty Traffic",
+        "title" : "Connections",
+        "series" : [
+          {
+            "key" : "connections",
+            "displayname" : "New connections",
+            "rightaxis" : true,
+            "color" : "rgba(101,152,186,0.4)",
+            "seriestype" : "bar"
+          },
+          {
+            "key" : "connectionsOpen",
+            "displayname" : "Open connections",
+            "seriestype" : "area"
+          }
+        ]
+      },
+      {
+        "group" : "Threads",
+        "title" : "Threads",
+        "series" : [
+          {
+            "key" : "busyThreads",
+            "displayname" : "Busy threads",
+            "seriestype" : "bar",
+            "stacked" : true
+          },
+          {
+            "key" : "idleThreads",
+            "displayname" : "Idle threads",
+            "color" : "rgb(101,152,186)",
+            "seriestype" : "bar",
+            "stacked" : true
+          },
+          {
+            "key" : "queueSize",
+            "displayname" : "Queue size",
+            "seriestype" : "line"
+          }
+        ]
+      }
+    ]
+  }
+}

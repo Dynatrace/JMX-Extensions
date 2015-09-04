@@ -1,0 +1,232 @@
+{
+    "version": "1.792",
+    "name": "ruxit.jmx.hornetq",
+    "type": "JMX",
+    "processTypes": [
+        10,
+        12,
+        13,
+        16,
+        17,
+        18
+    ], 
+    "configUI" : {
+        "displayName": "HornetQ JMX"
+    },
+    "entity": "PROCESS_GROUP_INSTANCE",
+    "metrics": [
+        {
+            "timeseries": {
+                "key": "Queue.ConsumerCount",
+                "unit": "Count",
+                "dimensions": [
+                    "rx_pid",
+                    "name"
+                ]
+            },
+            "source": {
+                "domain": "org.hornetq",
+                "keyProperties": {
+                    "module": "JMS",
+                    "type": "Queue",
+                    "name": "*"
+                },
+                "allowAdditionalKeys": false,
+                "attribute": "ConsumerCount",
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MAX",
+                "splitting": {
+                    "name": "name",
+                    "type": "keyProperty",
+                    "keyProperty": "name"
+                }
+            }
+        },
+        {
+            "timeseries": {
+                "key": "Queue.MessageCount",
+                "unit": "Count",
+                "dimensions": [
+                    "rx_pid",
+                    "name"
+                ]
+            },
+            "source": {
+                "domain": "org.hornetq",
+                "keyProperties": {
+                    "module": "JMS",
+                    "type": "Queue",
+                    "name": "*"
+                },
+                "allowAdditionalKeys": false,
+                "attribute": "MessageCount",
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MAX",
+                "splitting": {
+                    "name": "name",
+                    "type": "keyProperty",
+                    "keyProperty": "name"
+                }
+            }
+        },
+        {
+            "timeseries": {
+                "key": "Queue.ScheduledCount",
+                "unit": "Count",
+                "dimensions": [
+                    "rx_pid",
+                    "name"
+                ]
+            },
+            "source": {
+                "domain": "org.hornetq",
+                "keyProperties": {
+                    "module": "JMS",
+                    "type": "Queue",
+                    "name": "*"
+                },
+                "allowAdditionalKeys": false,
+                "attribute": "ScheduleCount",
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MAX",
+                "splitting": {
+                    "name": "name",
+                    "type": "keyProperty",
+                    "keyProperty": "name"
+                }
+            }
+        },
+        {
+            "timeseries": {
+                "key": "Queue.DeliveringCount",
+                "unit": "Count",
+                "dimensions": [
+                    "rx_pid",
+                    "name"
+                ]
+            },
+            "source": {
+                "domain": "org.hornetq",
+                "keyProperties": {
+                    "module": "JMS",
+                    "type": "Queue",
+                    "name": "*"
+                },
+                "allowAdditionalKeys": false,
+                "attribute": "DeliveringCount",
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MAX",
+                "splitting": {
+                    "name": "name",
+                    "type": "keyProperty",
+                    "keyProperty": "name"
+                }
+            }
+        },
+        {
+            "timeseries": {
+                "key": "Queue.MessagesAdded",
+                "unit": "Count",
+                "dimensions": [
+                    "rx_pid",
+                    "name"
+                ]
+            },
+            "source": {
+                "domain": "org.hornetq",
+                "keyProperties": {
+                    "module": "JMS",
+                    "type": "Queue",
+                    "name": "*"
+                },
+                "allowAdditionalKeys": false,
+                "attribute": "MessagesAdded",
+                "calculateDelta": true,
+                "calculateRate": false,
+                "aggregation": "SUM",
+                "splitting": {
+                    "name": "name",
+                    "type": "keyProperty",
+                    "keyProperty": "name"
+                }
+            }
+        }
+    ],
+    "ui": {
+        "keycharts" : [
+            {
+                "group": "HornetQ",
+                "title": "Queue depth and ingress",
+                "series": [
+                    {
+                        "key": "Queue.MessageCount",
+                        "aggregation": "avg",
+                "mergeaggregation": "sum",
+                        "displayname": "Average queue depth",
+                        "seriestype": "area"
+                    },
+                    {
+                        "key": "Queue.MessagesAdded",
+                        "displayname": "Message ingress",
+                        "seriestype": "bar",
+                        "color": "rgba(101,152,186,0.4)",
+                        "aggregation": "sum",
+                "mergeaggregation": "sum"
+                    }
+                ]
+            }
+        ],
+        "charts": [
+            {
+                "group": "HornetQ",
+                "title": "Queue depth and ingress",
+                "series": [
+                    {
+                        "key": "Queue.MessageCount",
+                        "aggregation": "avg",
+                        "displayname": "Average queue depth",
+                        "seriestype": "area"
+                    },
+                    {
+                        "key": "Queue.ScheduledCount",
+                        "aggregation": "avg",
+                        "displayname": "Scheduled messages",
+                        "color": "rgba(42, 182, 244, 0.6)",
+                        "seriestype": "area"
+                    },
+                    {
+                        "key": "Queue.MessagesAdded",
+                        "displayname": "Message ingress",
+                        "seriestype": "bar",
+                        "color": "rgba(101,152,186,0.4)",
+                        "aggregation": "sum"
+                    }
+                ]
+            },
+            {
+                "group": "HornetQ",
+                "title": "Consumers",
+                "series": [
+                    {
+                        "key": "Queue.ConsumerCount",
+                        "displayname": "Consumer count",
+                        "aggregation": "max",
+                        "seriestype": "area"
+                    },
+                    {
+                        "key": "Queue.DeliveringCount",
+                        "displayname": "Messages in progress",
+                        "seriestype": "bar",
+                        "color": "rgba(101,152,186,0.4)",
+                        "aggregation": "max",
+                        "rightaxis": true
+                    }
+                ]
+            }
+        ]
+    }
+}

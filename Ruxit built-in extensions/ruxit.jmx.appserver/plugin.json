@@ -1,0 +1,155 @@
+
+{
+  "version" : "1.790",
+  "name" : "ruxit.jmx.appserver",
+  "type" : "JMX",
+  "entity" : "PROCESS_GROUP_INSTANCE",
+  "processTypes":[10,12,16],
+  "metrics" : [
+    {
+      "timeseries" :
+      {
+        "key" : "tomcat.currentThreadsBusy",
+        "unit" : "Count",
+        "dimensions" : [
+          "rx_pid",
+          "name"
+        ]
+      },
+      "source" : {}
+    },
+    {
+      "timeseries" :
+      {
+        "key" : "tomcat.currentThreadsIdle",
+        "unit" : "Count",
+        "dimensions" : [
+          "rx_pid",
+          "name"
+        ]
+      },
+      "source" : {}
+    },
+    {
+      "timeseries" :
+      {
+        "key" : "tomcat.bytesReceivedPerSecond",
+        "unit" : "BytePerSecond",
+        "dimensions" : [
+          "rx_pid",
+          "name"
+        ]
+      },
+      "source" : {}
+    },
+    {
+      "timeseries" :
+      {
+        "key" : "tomcat.bytesSentPerSecond",
+        "unit" : "BytePerSecond",
+        "dimensions" : [
+          "rx_pid",
+          "name"
+        ]
+      },
+      "source" : {}
+    },
+    {
+      "timeseries" :
+      {
+        "key" : "tomcat.requestCountPerSecond",
+        "unit" : "PerSecond",
+        "dimensions" : [
+          "rx_pid",
+          "name"
+        ]
+      },
+      "source" : {}
+    }
+  ],
+  "ui" :
+  {
+    "keymetrics" : [
+      {
+        "key" : "tomcat.requestCountPerSecond",
+        "aggregation" : "avg",
+        "mergeaggregation" : "sum",
+        "displayname" : "Requests"
+      }
+    ],
+    "keycharts" : [
+      {
+        "title" : "Tomcat web requests",
+		"group" : "Tomcat metrics",
+        "series" : [
+          {
+            "key" : "tomcat.requestCountPerSecond",
+            "displayname" : "Requests",
+            "rightaxis" : true,
+            "color" : "rgba(101,152,186,0.4)",
+            "seriestype" : "bar",
+            "mergeaggregation" : "sum"
+          },
+          {
+            "key" : "tomcat.bytesSentPerSecond",
+            "displayname" : "Response size",
+            "seriestype" : "area",
+            "mergeaggregation" : "sum"
+          },
+          {
+            "key" : "tomcat.bytesReceivedPerSecond",
+            "displayname" : "Request size",
+            "color" : "#00558e",
+            "seriestype" : "area",
+            "mergeaggregation" : "sum"
+          }
+        ]
+      }
+    ],
+    "charts" : [
+      {
+        "group" : "Tomcat web requests",
+        "title" : "Web requests",
+        "series" : [
+          {
+            "key" : "tomcat.requestCountPerSecond",
+            "displayname" : "Requests",
+            "rightaxis" : true,
+            "color" : "rgba(101,152,186,0.4)",
+            "seriestype" : "bar"
+          },
+          {
+            "key" : "tomcat.bytesSentPerSecond",
+            "displayname" : "Response size",
+            "seriestype" : "area"
+          },
+          {
+            "key" : "tomcat.bytesReceivedPerSecond",
+            "displayname" : "Request size",
+            "color" : "#00558e",
+            "seriestype" : "area"
+          }
+        ]
+      },
+      {
+        "group" : "Threads",
+        "title" : "Threads",
+        "series" : [
+          {
+            "key" : "tomcat.currentThreadsBusy",
+            "displayname" : "Busy threads",
+            "seriestype" : "bar",
+            "stacked" : true
+          },
+          {
+            "key" : "tomcat.currentThreadsIdle",
+            "displayname" : "Idle threads",
+            "color" : "rgb(101,152,186)",
+            "seriestype" : "bar",
+            "stacked" : true
+          }
+        ]
+      }
+    ]
+  }
+}

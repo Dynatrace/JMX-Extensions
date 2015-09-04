@@ -1,0 +1,664 @@
+{
+	"version": "1.791",
+	"name": "ruxit.jmx.solr",
+	"type": "JMX",
+	"entity": "PROCESS_GROUP_INSTANCE",
+	"processTypes": [10],
+	
+	"configUI" :{
+		"displayName": "Solr JMX"
+	},
+	
+	"metrics": [
+	{
+		"timeseries": {
+			"key": "searcher.deletedDocs",
+			"unit": "Count",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "searcher",
+				"id": "org.apache.solr.search.SolrIndexSearcher"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "deletedDocs",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "searcher.maxDoc",
+			"unit": "Count",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "searcher",
+				"id": "org.apache.solr.search.SolrIndexSearcher"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "maxDoc",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "searcher.numDocs",
+			"unit": "Count",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "searcher",
+				"id": "org.apache.solr.search.SolrIndexSearcher"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "numDocs",
+			"calculateDelta": false,
+			"calculateRate": false,
+			"aggregation": "SUM"
+		}
+	},
+    {
+      "timeseries": {
+        "key": "update.adds",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "solr/*",
+        "keyProperties": {
+          "type": "updateHandler",
+          "id": "org.apache.solr.update.DirectUpdateHandler2"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "cumulative_adds",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "update.deletesById",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "solr/*",
+        "keyProperties": {
+          "type": "updateHandler",
+          "id": "org.apache.solr.update.DirectUpdateHandler2"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "cumulative_deletesById",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "update.deletesByQuery",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "solr/*",
+        "keyProperties": {
+          "type": "updateHandler",
+          "id": "org.apache.solr.update.DirectUpdateHandler2"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "cumulative_deletesByQuery",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "update.errors",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "solr/*",
+        "keyProperties": {
+          "type": "updateHandler",
+          "id": "org.apache.solr.update.DirectUpdateHandler2"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "cumulative_errors",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    },
+	{
+		"timeseries": {
+			"key": "documentCache.evictions",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "documentCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_evictions",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "documentCache.hits",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "documentCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_hits",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "documentCache.inserts",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "documentCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_inserts",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "documentCache.lookups",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "documentCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_lookups",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "queryResultCache.evictions",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "queryResultCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_evictions",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "queryResultCache.hits",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "queryResultCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_hits",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "queryResultCache.inserts",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "queryResultCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_inserts",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "queryResultCache.lookups",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "queryResultCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_lookups",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "filterCache.evictions",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "filterCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_evictions",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "filterCache.hits",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "filterCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_hits",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "filterCache.inserts",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "filterCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_inserts",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "filterCache.lookups",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "filterCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_lookups",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "fieldValueCache.evictions",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "fieldValueCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_evictions",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "fieldValueCache.hits",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "fieldValueCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_hits",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "fieldValueCache.inserts",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "fieldValueCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_inserts",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+	{
+		"timeseries": {
+			"key": "fieldValueCache.lookups",
+			"unit": "PerSecond",
+			"dimensions": ["rx_pid"]
+		},
+		"source": {
+			"domain": "solr/*",
+			"keyProperties": {
+				"type": "fieldValueCache",
+				"id": "*"
+			},
+			"allowAdditionalKeys": false,
+			"attribute": "cumulative_lookups",
+			"calculateDelta": true,
+			"calculateRate": true,
+			"aggregation": "SUM"
+		}
+	},
+    {
+      "timeseries": {
+        "key": "select.requests",
+        "unit": "PerSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "solr/*",
+        "keyProperties": {
+          "type": "*",
+          "id": "org.apache.solr.handler.component.SearchHandler"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "requests",
+        "calculateDelta": true,
+        "calculateRate": true,
+        "aggregation": "SUM"
+      }
+    }    
+	],
+  "ui" :
+  {
+    "charts" : [
+      {
+        "group" : "SolR Documents",
+        "title" : "Documents",
+        "series" : [
+          {
+            "key" : "searcher.numDocs",
+            "displayname" : "Documents",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "searcher.deletedDocs",
+            "displayname" : "Documents deleted",
+            "color" : "#bdc9ff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "searcher.maxDoc",
+            "displayname" : "max Documents",
+            "color" : "rgb(61,64,184)",
+            "seriestype" : "line"
+          }
+        ]
+      },
+      {
+        "group" : "SolR Documents",
+        "title" : "Updates",
+        "series" : [
+          {
+            "key" : "update.adds",
+            "displayname" : "adds",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "update.deletesById",
+            "displayname" : "deletesById",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "update.deletesByQuery",
+            "displayname" : "deletesByQuery",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "update.errors",
+            "displayname" : "errors",
+            "seriestype" : "line"
+          }        
+          ]
+      },
+      {
+        "group" : "SolR Caches",
+        "title" : "QueryResultCache",
+        "series" : [
+          {
+             "key" : "queryResultCache.hits",
+            "displayname" : "hits",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          },
+          {
+           "key" : "queryResultCache.lookups",
+            "displayname" : "lookups",
+            "color" : "#bdc9ff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "queryResultCache.inserts",
+            "displayname" : "inserts",
+            "color" : "rgba(61,64,184,0.4)",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "queryResultCache.evictions",
+            "displayname" : "evictions",
+            "seriestype" : "line"
+          }		  		  		  
+        ]
+      },
+      {
+        "group" : "SolR Caches",
+        "title" : "DocumentCache",
+        "series" : [
+          {
+            "key" : "documentCache.hits",
+            "displayname" : "hits",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "documentCache.lookups",
+            "displayname" : "lookups",
+            "color" : "#bdc9ff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "documentCache.inserts",
+            "displayname" : "inserts",
+            "color" : "rgba(61,64,184,0.4)",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "documentCache.evictions",
+            "displayname" : "evictions",
+            "seriestype" : "line"
+          }
+        ]
+      },
+      {
+        "group" : "SolR Caches",
+        "title" : "FilterCache",
+        "series" : [
+          {
+            "key" : "filterCache.hits",
+            "displayname" : "hits",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "filterCache.lookups",
+            "displayname" : "lookups",
+            "color" : "#bdc9ff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "filterCache.inserts",
+            "displayname" : "inserts",
+            "color" : "rgba(61,64,184,0.4)",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "filterCache.evictions",
+            "displayname" : "evictions",
+            "seriestype" : "line"
+          }
+        ]
+      },
+      {
+        "group" : "SolR Caches",
+        "title" : "FieldValueCache",
+        "series" : [
+          {
+            "key" : "fieldValueCache.hits",
+            "displayname" : "hits",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "fieldValueCache.lookups",
+            "displayname" : "lookups",
+            "color" : "#bdc9ff",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "fieldValueCache.inserts",
+            "displayname" : "inserts",
+            "color" : "rgba(61,64,184,0.4)",
+            "seriestype" : "line"
+          },
+          {
+            "key" : "fieldValueCache.evictions",
+            "displayname" : "evictions",
+            "seriestype" : "line"
+          }
+        ]
+      },
+      {
+        "group" : "SolR Documents",
+        "title" : "QueryHandlers",
+        "series" : [
+          {
+            "key" : "select.requests",
+            "displayname" : "search requests",
+            "color" : "#466eff",
+            "seriestype" : "line"
+          }
+        ]
+      }      
+    ]
+  }
+}
