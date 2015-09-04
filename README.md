@@ -22,7 +22,7 @@ An extension consists of 3 main elements: metadata, metrics, and UI config. The 
 		}
 	}
           
-Each JMX extension has the following properties:
+Each JMX extension has the following mandatory properties:
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
@@ -61,7 +61,7 @@ This part specifies the metadata of a metric.
 | ----- | ---- | ----------- |
 | key | String | Metric name. Must be unique whithin this extension. |
 | unit | String | Metric unit. Must be one of the Available units described below |
-| dimensions | String Array | Must contain "rx_pid" at index 0. This ensures that JMX attributes get the system process ID (PID) as a dimension. Further, dimensions can be used to, for example, provide 1 metric per JMX ObjectName key property value. For example, QueueName, ThreadPoolName, or ConnectionPoolName. |
+| dimensions | String Array | Must contain "rx_pid" at index 0. This ensures that JMX attributes get the system process ID (PID) as a dimension. Additional dimensions can be used to, for example, provide 1 metric per JMX ObjectName key property value. For example, QueueName, ThreadPoolName, or ConnectionPoolName. |
 
 Available units: 
 NanoSecond, MicroSecond, MilliSecond, Second, Byte, KiloByte, MegaByte, BytePerSecond, BytePerMinute, KiloBytePerSecond, KiloBytePerMinute, MegaBytePerSecond, MegaBytePerMinute, Count, PerSecond, PerMinute
@@ -82,7 +82,7 @@ Optional attributes are:
 | ----- | ---- | ----------- |
 | allowAdditionalKeys | Boolean | If this is false, the keyProperties need to match exactly. Additional keys in the name will lead to a mismatch. If true, then additional key properties beside those specified in "keyProperties" are allowed and ignored. |
 | calculateDelta | bool | If true, calculate the change in values of the given attribute. Value = attribute(t) - attribute(t-1). This is useful for monoto. |
-| calculateRate | bool | If true, calculate the rate of changes per seconds. This is used in combination with calculateDelta to convert an absolute attribute (for example, Request Count) to a rate (for example, Requests per Second). Value = attribute / query interval
+| calculateRate | bool | If true, calculate the rate of changes per seconds. This is used in combination with calculateDelta to convert an absolute attribute (eg. Request Count) to a rate (eg. Requests per Second). Value = attribute / query interval
 | aggregation | String | Ruxit captures a value every 10 seconds but only sends one aggregate value per minute. This specifies how to aggregate these 10 second values. It is also used to aggregate multiple values if more than 1 MBean matches the domain and key property filter. Possible values: SUM, AVG, MIN, MAX |
 | splitting | Object | Set details below |
 
