@@ -1,12 +1,14 @@
 {
-  "version": "1.70.0.20150422-141900",
+  "version": "1.07",
   "name": "jmx.ActiveMQ",
   "type": "JMX",
-  "processType": 7,
+  "processTypes":  [ 10, 12, 13, 16, 17, 18 ],
   "entity": "PROCESS_GROUP_INSTANCE",
-  "metrics": [
+    "configUI" : {
+        "displayName": "ActiveMQ JMX"
+    },  
+	"metrics": [
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "Topic.AverageMessageSize",
         "unit": "Count",
@@ -19,7 +21,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -27,7 +29,7 @@
         "attribute": "AverageMessageSize",
         "calculateDelta": false,
         "calculateRate": false,
-        "aggregation": "AVERAGE",
+        "aggregation": "AVG",
         "splitting": {
           "name": "destinationName",
           "type": "keyProperty",
@@ -36,7 +38,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "Topic.ConsumerCount",
         "unit": "Count",
@@ -49,7 +50,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -66,7 +67,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "DequeueCount",
         "unit": "Count",
@@ -79,7 +79,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -96,7 +96,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "DispatchCount",
         "unit": "Count",
@@ -109,7 +108,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -126,7 +125,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "EnqueueCount",
         "unit": "Count",
@@ -139,7 +137,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -156,7 +154,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "InFlightCount",
         "unit": "Count",
@@ -169,7 +166,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -186,7 +183,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "ExpiredCount",
         "unit": "Count",
@@ -199,7 +195,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -216,7 +212,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "ProducerCount",
         "unit": "Count",
@@ -229,7 +224,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
@@ -246,7 +241,6 @@
       }
     },
     {
-      "entity": "PROCESS_GROUP_INSTANCE",
       "timeseries": {
         "key": "QueueSize",
         "unit": "Count",
@@ -259,7 +253,7 @@
         "domain": "org.apache.activemq",
         "keyProperties": {
           "type": "Broker",
-          "brokerName": "localhost",
+          "brokerName": "*",
           "destinationType": "Topic",
           "destinationName": "*"
         },
