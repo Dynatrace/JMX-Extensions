@@ -1,0 +1,554 @@
+{
+    "version": "0.21",
+    "name": "netflix.servo",
+    "type": "JMX",
+    "entity": "PROCESS_GROUP_INSTANCE",
+    "processTypes": [10,12,13,16,17,18],
+    
+    "configUI" : {
+        "displayName": "Netflix OSS JMX"
+    },
+
+    "metrics": [
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_CreateNew",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient-HTTPClient_CreateNew",
+                    "class": "NamedConnectionPool",
+                    "id": "DiscoveryClient-HTTPClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_Delete",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient-HTTPClient_Delete",
+                    "class": "NamedConnectionPool",
+                    "id": "DiscoveryClient-HTTPClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_Release",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient-HTTPClient_Release",
+                    "class": "NamedConnectionPool",
+                    "id": "DiscoveryClient-HTTPClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_Request",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient-HTTPClient_Request",
+                    "class": "NamedConnectionPool",
+                    "id": "DiscoveryClient-HTTPClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_Reuse",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient-HTTPClient_Reuse",
+                    "class": "NamedConnectionPool",
+                    "id": "DiscoveryClient-HTTPClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient_Failed",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient_Failed",
+                    "class": "DiscoveryClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient_Reregister",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient_Reregister",
+                    "class": "DiscoveryClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient_Retry",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "COUNTER",
+                    "name": "DiscoveryClient_Retry",
+                    "class": "DiscoveryClient"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_count",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
+                    "statistic": "count",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_max",
+                "unit": "MilliSecond",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
+                    "statistic": "max",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MAX"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_min",
+                "unit": "MilliSecond",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
+                    "statistic": "min",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MIN"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_totalTime",
+                "unit": "MilliSecond",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
+                    "statistic": "totalTime",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_count",
+                "unit": "Count",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_RequestConnectionTimer",
+                    "statistic": "count",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_max",
+                "unit": "MilliSecond",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_RequestConnectionTimer",
+                    "statistic": "max",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MAX"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_min",
+                "unit": "MilliSecond",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_RequestConnectionTimer",
+                    "statistic": "min",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "MIN"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_totalTime",
+                "unit": "MilliSecond",
+                "dimensions": ["rx_pid"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "DiscoveryClient-HTTPClient_RequestConnectionTimer",
+                    "statistic": "totalTime",
+                    "class": "NamedConnectionPool",
+                    "unit": "MILLISECONDS"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM"
+            }
+        },
+        {
+            "timeseries": {
+                "key": "ZoneStats_CircuitBreakerTrippedCount",
+                "unit": "Count",
+                "dimensions": ["rx_pid", "id"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "ZoneStats_CircuitBreakerTrippedCount",
+                    "id": "*",
+                    "class": "ZoneStats",
+                    "level": "INFO"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM",
+                "splitting": {
+                    "name": "id",
+                    "type": "keyProperty",
+                    "keyProperty": "id"
+                }
+            }
+        },
+        {
+            "timeseries": {
+                "key": "ZoneStats_InstanceCount",
+                "unit": "Count",
+                "dimensions": ["rx_pid", "id"]
+            },
+            "source": {
+                "domain": "com.netflix.servo",
+                "keyProperties": {
+                    "type": "GAUGE",
+                    "name": "ZoneStats_InstanceCount",
+                    "id": "*",
+                    "class": "ZoneStats",
+                    "level": "INFO"
+                },
+                "attribute": "value",
+                "allowAdditionalKeys": true,
+                "calculateDelta": false,
+                "calculateRate": false,
+                "aggregation": "SUM",
+                "splitting": {
+                    "name": "id",
+                    "type": "keyProperty",
+                    "keyProperty": "id"
+                }
+            }
+        }
+    ],
+    "ui": {
+      "charts": [
+         {
+                "group": "Eureka",
+                "title": "Discovery Client: HTTP-Clients",
+                "series": [
+                 {
+                        "key": "DiscoveryClient-HTTPClient_CreateNew",
+                        "displayname": "Create New",
+                        "color": "rgba(101,152,186,0.4)",
+                        "seriestype": "bar"
+                 },
+                {
+                        "key": "DiscoveryClient-HTTPClient_Delete",
+                        "displayname": "Delete",
+                        "seriestype": "bar",
+                        "color" : "#bdc9ff"
+                },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_Release",
+                        "displayname": "Release",
+                        "seriestype": "bar",
+                        "rightaxis": true
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_Request",
+                        "displayname": "Request",
+                        "color" : "#466eff",
+                        "seriestype": "bar",
+                        "rightaxis": true
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_Reuse",
+                        "displayname": "Reuse",
+                        "color": "rgba(42, 182, 244, 0.6)",
+                        "seriestype": "bar",
+                        "rightaxis": true
+                 }
+                ]
+         },
+         {
+                "group": "Eureka",
+                "title": "Discovery Client",
+                "series": [
+                 {
+                        "key": "DiscoveryClient_Reregister",
+                        "displayname": "Reregister",
+                        "color" : "#466eff",
+                        "seriestype": "bar"
+                 },
+                 {
+                        "key": "DiscoveryClient_Retry",
+                        "displayname": "Retry",
+                        "color" : "#FFCD00",
+                        "seriestype": "bar"
+                 },
+                {
+                        "key": "DiscoveryClient_Failed",
+                        "displayname": "Failed",
+                        "color": "#FF6666",
+                        "seriestype": "bar"
+                 }
+                ]
+         },
+         {
+                "group": "Eureka",
+                "title": "Discovery Client: Connection creation",
+                "series": [
+                 {
+                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_max",
+                        "displayname": "Max",
+                        "color" : "#466eff",
+                        "seriestype": "line"
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_min",
+                        "displayname": "Min",
+                        "color": "rgba(42, 182, 244, 0.6)",
+                        "seriestype": "line"
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_totalTime",
+                        "displayname": "Total",
+                        "color": "rgba(101,152,186,0.4)",
+                        "seriestype": "area"
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_count",
+                        "displayname": "Count",
+                        "seriestype": "area",
+                        "rightaxis": true
+                 }
+                ]
+         },
+         {
+                "group": "Eureka",
+                "title": "Discovery Client: Connection Times",
+                "series": [
+                 {
+                        "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_max",
+                        "displayname": "Max",
+                        "color" : "#466eff",
+                        "seriestype": "line"
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_min",
+                        "displayname": "Min",
+                        "color": "rgba(42, 182, 244, 0.6)",
+                        "seriestype": "line"
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_totalTime",
+                        "displayname": "Total",
+                        "color": "rgba(101,152,186,0.4)",
+                        "seriestype": "area"
+                 },
+                 {
+                        "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_count",
+                        "displayname": "Count",
+                        "seriestype": "bar",
+                        "rightaxis": true
+                 }
+                ]
+         },
+         {
+                "group": "Eureka",
+                "title": "Zone Stats",
+                "series": [
+                 {
+                        "key": "ZoneStats_InstanceCount",
+                        "displayname": "Service instances",
+                        "color": "rgba(101,152,186,0.4)",
+                        "seriestype": "area"
+                 },
+                 {
+                        "key": "ZoneStats_CircuitBreakerTrippedCount",
+                        "displayname": "Circuit breaker trip count",
+                        "seriestype": "bar",
+                        "color": "#FF6666",
+                        "rightaxis": true
+                 }
+                ]
+         }
+      ]
+    }
+}
