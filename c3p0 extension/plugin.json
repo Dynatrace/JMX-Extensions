@@ -1,0 +1,149 @@
+{
+  "version": "1.01",
+  "name": "jmx.c3p0",
+  "type": "JMX",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "processTypes": [10, 12, 13, 16, 17, 18],
+    "configUI" : {
+        "displayName": "c3p0 JMX"
+    },
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "maxPoolSize",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "ConnectionPoolName"
+        ]
+      },
+      "source": {
+        "domain": "com.mchange.v2.c3p0",
+        "keyProperties": {
+          "type": "PooledDataSource*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "maxPoolSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "ConnectionPoolName",
+            "type": "keyProperty",
+            "keyProperty": "type"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numConnections",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "ConnectionPoolName"
+        ]
+      },
+      "source": {
+        "domain": "com.mchange.v2.c3p0",
+        "keyProperties": {
+          "type": "PooledDataSource*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "numConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "ConnectionPoolName",
+            "type": "keyProperty",
+            "keyProperty": "type"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numBusyConnections",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "ConnectionPoolName"
+        ]
+      },
+      "source": {
+        "domain": "com.mchange.v2.c3p0",
+        "keyProperties": {
+          "type": "PooledDataSource*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "numBusyConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "ConnectionPoolName",
+            "type": "keyProperty",
+            "keyProperty": "type"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "numUnclosedOrphanedConnections",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "ConnectionPoolName"
+        ]
+      },
+      "source": {
+        "domain": "com.mchange.v2.c3p0",
+        "keyProperties": {
+          "type": "PooledDataSource*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "numUnclosedOrphanedConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "ConnectionPoolName",
+            "type": "keyProperty",
+            "keyProperty": "type"
+        }
+      }
+    }
+  ],
+    "ui": {
+      "charts": [
+      {
+        "group": "c3p0 JMX",
+        "title": "Connection Pool",
+        "series": [
+         {
+                "key": "maxPoolSize",
+                "displayname": "Max pool size",
+                "color": "rgba(101,152,186,0.4)",
+                "seriestype": "line"
+         },
+        {
+                "key": "numConnections",
+                "displayname": "Current pool size",
+                "seriestype": "area",
+                "color" : "#bdc9ff"
+        },
+         {
+                "key": "numBusyConnections",
+                "displayname": "Busy connections",
+                "seriestype": "area"
+         },
+         {
+                "key": "numUnclosedOrphanedConnections",
+                "displayname": "Orphaned connections",
+                "color": "#FF6666",
+                "seriestype": "bar"
+         }
+         ]
+         }
+      ]
+    }
+}

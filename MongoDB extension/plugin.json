@@ -1,0 +1,161 @@
+{
+  "version": "0.4",
+  "name": "mongodb.jmx",
+  "type": "JMX",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "processTypes": [10],
+  "configUI" : {
+    "displayName": "MongoDB JMX"
+  },
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "CheckedOutCount",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "MongoCluster"
+        ]
+      },
+      "source": {
+        "domain": "org.mongodb.driver",
+        "keyProperties": {
+          "type": "ConnectionPool",
+          "clusterId": "*",
+          "host": "*",
+          "port": "*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "CheckedOutCount",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "MongoCluster",
+            "type": "keyProperty",
+            "keyProperty": "clusterId"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "MaxSize",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "MongoCluster"
+        ]
+      },
+      "source": {
+        "domain": "org.mongodb.driver",
+        "keyProperties": {
+          "type": "ConnectionPool",
+          "clusterId": "*",
+          "host": "*",
+          "port": "*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "MaxSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "MongoCluster",
+            "type": "keyProperty",
+            "keyProperty": "clusterId"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "Size",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "MongoCluster"
+        ]
+      },
+      "source": {
+        "domain": "org.mongodb.driver",
+        "keyProperties": {
+          "type": "ConnectionPool",
+          "clusterId": "*",
+          "host": "*",
+          "port": "*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "Size",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "MongoCluster",
+            "type": "keyProperty",
+            "keyProperty": "clusterId"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "WaitQueueSize",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid",
+          "MongoCluster"
+        ]
+      },
+      "source": {
+        "domain": "org.mongodb.driver",
+        "keyProperties": {
+          "type": "ConnectionPool",
+          "clusterId": "*",
+          "host": "*",
+          "port": "*"
+        },
+        "allowAdditionalKeys": true,
+        "attribute": "WaitQueueSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+            "name": "MongoCluster",
+            "type": "keyProperty",
+            "keyProperty": "clusterId"
+        }
+      }
+    }
+  ],
+    "ui": {
+      "charts": [
+      {
+        "group": "MongoDB JMX",
+        "title": "Connection Pool",
+        "series": [
+         {
+                "key": "MaxSize",
+                "displayname": "Max pool size",
+                "color": "rgba(101,152,186,0.4)",
+                "seriestype": "line"
+         },
+        {
+                "key": "Size",
+                "displayname": "Current pool size",
+                "seriestype": "area",
+                "color" : "#bdc9ff"
+        },
+         {
+                "key": "CheckedOutCount",
+                "displayname": "Busy connections",
+                "seriestype": "area"
+         },
+         {
+                "key": "WaitQueueSize",
+                "displayname": "Waiting connections",
+                "color": "#FF6666",
+                "seriestype": "bar"
+         }
+         ]
+         }
+      ]
+    }
+}

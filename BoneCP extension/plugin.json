@@ -1,0 +1,99 @@
+{
+  "version": "0.1",
+  "name": "bonecp.jmx",
+  "type": "JMX",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "processTypes": [10],
+  "configUI" : {
+    "displayName": "BoneCP JMX"
+  },
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "TotalCreatedConnections",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "com.jolbox.bonecp",
+        "keyProperties": {
+          "type": "BoneCP"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "TotalCreatedConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "TotalLeased",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "com.jolbox.bonecp",
+        "keyProperties": {
+          "type": "BoneCP"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "TotalLeased",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "ConnectionsRequested",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "com.jolbox.bonecp",
+        "keyProperties": {
+          "type": "BoneCP"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "ConnectionsRequested",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    }
+  ],
+    "ui": {
+      "charts": [
+      {
+        "group": "BoneCP JMX",
+        "title": "Connection Pool",
+        "series": [
+        {
+                "key": "TotalCreatedConnections",
+                "displayname": "Current pool size",
+                "seriestype": "area",
+                "color" : "#bdc9ff"
+        },
+         {
+                "key": "TotalLeased",
+                "displayname": "Busy connections",
+                "seriestype": "area"
+         },
+         {
+                "key": "ConnectionsRequested",
+                "displayname": "Waiting connections",
+                "color": "#FF6666",
+                "seriestype": "bar"
+         }
+         ]
+         }
+      ]
+    }
+}

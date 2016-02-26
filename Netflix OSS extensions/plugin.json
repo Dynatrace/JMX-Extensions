@@ -1,12 +1,12 @@
 {
-    "version": "1.00",
+    "version": "1.1",
     "name": "netflix.servo",
     "type": "JMX",
     "entity": "PROCESS_GROUP_INSTANCE",
     "processTypes": [10,12,13,16,17,18],
     
     "configUI" : {
-        "displayName": "Netflix OSS JMX"
+        "displayName": "Netflix OSS"
     },
 
     "metrics": [
@@ -409,8 +409,8 @@
     "ui": {
       "charts": [
          {
-                "group": "Eureka",
-                "title": "Discovery Client: HTTP-Clients",
+                "group": "Eureka discovery",
+                "title": "HTTP-Clients",
                 "series": [
                  {
                         "key": "DiscoveryClient-HTTPClient_CreateNew",
@@ -427,40 +427,37 @@
                  {
                         "key": "DiscoveryClient-HTTPClient_Release",
                         "displayname": "Release",
-                        "seriestype": "bar",
-                        "rightaxis": true
+                        "seriestype": "line"
                  },
                  {
                         "key": "DiscoveryClient-HTTPClient_Request",
                         "displayname": "Request",
                         "color" : "#466eff",
-                        "seriestype": "bar",
-                        "rightaxis": true
+                        "seriestype": "line"
                  },
                  {
                         "key": "DiscoveryClient-HTTPClient_Reuse",
                         "displayname": "Reuse",
                         "color": "rgba(42, 182, 244, 0.6)",
-                        "seriestype": "bar",
-                        "rightaxis": true
+                        "seriestype": "line"
                  }
                 ]
          },
          {
-                "group": "Eureka",
-                "title": "Discovery Client",
+                "group": "Eureka discovery",
+                "title": "Connection behavior",
                 "series": [
                  {
                         "key": "DiscoveryClient_Reregister",
                         "displayname": "Reregister",
                         "color" : "#466eff",
-                        "seriestype": "bar"
+                        "seriestype": "area"
                  },
                  {
                         "key": "DiscoveryClient_Retry",
                         "displayname": "Retry",
                         "color" : "#FFCD00",
-                        "seriestype": "bar"
+                        "seriestype": "area"
                  },
                 {
                         "key": "DiscoveryClient_Failed",
@@ -471,8 +468,8 @@
                 ]
          },
          {
-                "group": "Eureka",
-                "title": "Discovery Client: Connection creation",
+                "group": "Eureka discovery",
+                "title": "Connection creation time",
                 "series": [
                  {
                         "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_max",
@@ -501,8 +498,8 @@
                 ]
          },
          {
-                "group": "Eureka",
-                "title": "Discovery Client: Connection Times",
+                "group": "Eureka discovery",
+                "title": "Connection request time",
                 "series": [
                  {
                         "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_max",
@@ -531,7 +528,7 @@
                 ]
          },
          {
-                "group": "Eureka",
+                "group": "Hystrix circuit breaker",
                 "title": "Zone Stats",
                 "series": [
                  {
@@ -542,7 +539,7 @@
                  },
                  {
                         "key": "ZoneStats_CircuitBreakerTrippedCount",
-                        "displayname": "Circuit breaker trip count",
+                        "displayname": "Hystrix circuit breaker trip count",
                         "seriestype": "bar",
                         "color": "#FF6666",
                         "rightaxis": true
