@@ -26,7 +26,7 @@
         "attribute": "Size",
         "calculateDelta": false,
         "calculateRate": false,
-        "aggregation": "SUM"
+        "aggregation": "MAX"
       }
     },
     {
@@ -47,7 +47,7 @@
         "attribute": "MaxActive",
         "calculateDelta": false,
         "calculateRate": false,
-        "aggregation": "SUM"
+        "aggregation": "MAX"
       }
     },
     {
@@ -68,7 +68,7 @@
         "attribute": "Active",
         "calculateDelta": false,
         "calculateRate": true,
-        "aggregation": "SUM"
+        "aggregation": "MAX"
       }
     }
   ],
