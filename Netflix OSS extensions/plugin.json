@@ -1,5 +1,5 @@
 {
-    "version": "1.1",
+    "version": "1.2",
     "name": "netflix.servo",
     "type": "JMX",
     "entity": "PROCESS_GROUP_INSTANCE",
@@ -8,113 +8,7 @@
     "configUI" : {
         "displayName": "Netflix OSS"
     },
-
     "metrics": [
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_CreateNew",
-                "unit": "Count",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "COUNTER",
-                    "name": "DiscoveryClient-HTTPClient_CreateNew",
-                    "class": "NamedConnectionPool",
-                    "id": "DiscoveryClient-HTTPClient"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_Delete",
-                "unit": "Count",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "COUNTER",
-                    "name": "DiscoveryClient-HTTPClient_Delete",
-                    "class": "NamedConnectionPool",
-                    "id": "DiscoveryClient-HTTPClient"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_Release",
-                "unit": "Count",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "COUNTER",
-                    "name": "DiscoveryClient-HTTPClient_Release",
-                    "class": "NamedConnectionPool",
-                    "id": "DiscoveryClient-HTTPClient"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_Request",
-                "unit": "Count",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "COUNTER",
-                    "name": "DiscoveryClient-HTTPClient_Request",
-                    "class": "NamedConnectionPool",
-                    "id": "DiscoveryClient-HTTPClient"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_Reuse",
-                "unit": "Count",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "COUNTER",
-                    "name": "DiscoveryClient-HTTPClient_Reuse",
-                    "class": "NamedConnectionPool",
-                    "id": "DiscoveryClient-HTTPClient"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
         {
             "timeseries": {
                 "key": "DiscoveryClient_Failed",
@@ -167,94 +61,6 @@
                     "type": "COUNTER",
                     "name": "DiscoveryClient_Retry",
                     "class": "DiscoveryClient"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_count",
-                "unit": "Count",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "GAUGE",
-                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
-                    "statistic": "count",
-                    "class": "NamedConnectionPool",
-                    "unit": "MILLISECONDS"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "SUM"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_max",
-                "unit": "MilliSecond",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "GAUGE",
-                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
-                    "statistic": "max",
-                    "class": "NamedConnectionPool",
-                    "unit": "MILLISECONDS"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "MAX"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_min",
-                "unit": "MilliSecond",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "GAUGE",
-                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
-                    "statistic": "min",
-                    "class": "NamedConnectionPool",
-                    "unit": "MILLISECONDS"
-                },
-                "attribute": "value",
-                "allowAdditionalKeys": true,
-                "calculateDelta": false,
-                "calculateRate": false,
-                "aggregation": "MIN"
-            }
-        },
-        {
-            "timeseries": {
-                "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_totalTime",
-                "unit": "MilliSecond",
-                "dimensions": ["rx_pid"]
-            },
-            "source": {
-                "domain": "com.netflix.servo",
-                "keyProperties": {
-                    "type": "GAUGE",
-                    "name": "DiscoveryClient-HTTPClient_CreateConnectionTimer",
-                    "statistic": "totalTime",
-                    "class": "NamedConnectionPool",
-                    "unit": "MILLISECONDS"
                 },
                 "attribute": "value",
                 "allowAdditionalKeys": true,
@@ -409,42 +215,7 @@
     "ui": {
       "charts": [
          {
-                "group": "Eureka discovery",
-                "title": "HTTP-Clients",
-                "series": [
-                 {
-                        "key": "DiscoveryClient-HTTPClient_CreateNew",
-                        "displayname": "Create New",
-                        "color": "rgba(101,152,186,0.4)",
-                        "seriestype": "bar"
-                 },
-                {
-                        "key": "DiscoveryClient-HTTPClient_Delete",
-                        "displayname": "Delete",
-                        "seriestype": "bar",
-                        "color" : "#bdc9ff"
-                },
-                 {
-                        "key": "DiscoveryClient-HTTPClient_Release",
-                        "displayname": "Release",
-                        "seriestype": "line"
-                 },
-                 {
-                        "key": "DiscoveryClient-HTTPClient_Request",
-                        "displayname": "Request",
-                        "color" : "#466eff",
-                        "seriestype": "line"
-                 },
-                 {
-                        "key": "DiscoveryClient-HTTPClient_Reuse",
-                        "displayname": "Reuse",
-                        "color": "rgba(42, 182, 244, 0.6)",
-                        "seriestype": "line"
-                 }
-                ]
-         },
-         {
-                "group": "Eureka discovery",
+                "group": "Eureka service registry",
                 "title": "Connection behavior",
                 "series": [
                  {
@@ -468,37 +239,7 @@
                 ]
          },
          {
-                "group": "Eureka discovery",
-                "title": "Connection creation time",
-                "series": [
-                 {
-                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_max",
-                        "displayname": "Max",
-                        "color" : "#466eff",
-                        "seriestype": "line"
-                 },
-                 {
-                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_min",
-                        "displayname": "Min",
-                        "color": "rgba(42, 182, 244, 0.6)",
-                        "seriestype": "line"
-                 },
-                 {
-                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_totalTime",
-                        "displayname": "Total",
-                        "color": "rgba(101,152,186,0.4)",
-                        "seriestype": "area"
-                 },
-                 {
-                        "key": "DiscoveryClient-HTTPClient_CreateConnectionTimer_count",
-                        "displayname": "Count",
-                        "seriestype": "area",
-                        "rightaxis": true
-                 }
-                ]
-         },
-         {
-                "group": "Eureka discovery",
+                "group": "Eureka service registry",
                 "title": "Connection request time",
                 "series": [
                  {
