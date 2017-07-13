@@ -27,7 +27,7 @@ Each JMX extension has the following mandatory properties:
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | version | String | The extension version in format "d.dd", must be updated whenever the extension definition is updated |
-| name | String | A unique extension name in Java package format. Custom jmx plugins names should follow cutsom.jmx.name rule. In name  only letters, numbers and "-" ,  "_" chars are allowed for example  custom.jmx.newPlugin-Ver2. |
+| name | String | A unique extension name in Java package format. Custom jmx plugins names should follow cutsom.jmx.name rule. In name  only letters, numbers and "-" ,  "_" chars are allowed for example  custom.jmx.newPlugin-Ver2 |
 | type | String | Always use "JMX"
 | processTypes | Integer array | Always use [ 10, 12, 13, 16, 17, 18 ] |
 | entity| String | Always use "PROCESS_GROUP_INSTANCE" |
@@ -208,6 +208,13 @@ A series has the following attributes:
 | seriestype | String | Chart type. Possible values are: line, area, and bar |
 | rightaxis | Boolean | If true, the metric will be placed on the right instead of the left axis. Note that Ruxit does support dual axis charts. |
 | stacked | Boolean | If true, then multiple metrics will be stacked upon each other. This only works for area and bar charts. |
+
+## Plugin.json reference
+* [Metadata](https://dynatrace.github.io/plugin-sdk/api/plugin_json_apidoc.html#metadata)
+* [Metrics](https://dynatrace.github.io/plugin-sdk/api/plugin_json_apidoc.html#metrics)
+* [Metrics alerts](https://dynatrace.github.io/plugin-sdk/api/plugin_json_apidoc.html#metrics-alerts)
+* [Visualization](https://dynatrace.github.io/plugin-sdk/api/plugin_json_apidoc.html#visualization)
+* [Plugin configuration](https://dynatrace.github.io/plugin-sdk/api/plugin_json_apidoc.html##plugin-configuration)
 
 ## Example
 
