@@ -8,7 +8,7 @@ An extension consists of 3 main elements: metadata, metrics, and UI config. The 
 
 	{
 		"version": "1.0",
-		"name": "jmx.hornetq",
+		"name": "custom.jmx.hornetq",
 		"type": "JMX",
 		"processTypes": [ 10, 12, 13, 16, 17, 18 ],	
 		"entity": "PROCESS_GROUP_INSTANCE",
@@ -27,7 +27,7 @@ Each JMX extension has the following mandatory properties:
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | version | String | The extension version in format "d.dd", must be updated whenever the extension definition is updated |
-| name | String | A unique extension name in Java package format. Extensions developed by Ruxit begin with "ruxit.", consequently one of the few restrictions is that custom estensions cannot begin with "ruxit.". |
+| name | String | A unique extension name in Java package format. Custom jmx plugins names should follow cutsom.jmx.name rule. In name  only letters, numbers and "-" ,  "_" chars are allowed for example  custom.jmx.newPlugin-Ver2. |
 | type | String | Always use "JMX"
 | processTypes | Integer array | Always use [ 10, 12, 13, 16, 17, 18 ] |
 | entity| String | Always use "PROCESS_GROUP_INSTANCE" |
@@ -59,9 +59,9 @@ This part specifies the metadata of a metric.
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| key | String | Metric name. Must be unique whithin this extension. |
+| key | String | Metric name. Must be unique whithin this extension. Only  letters, numbers and "-" ,  "_" charts are allowed.|
 | unit | String | Metric unit. Must be one of the Available units described below |
-| dimensions | String Array | Must contain "rx_pid" at index 0. This ensures that JMX attributes get the system process ID (PID) as a dimension. Additional dimensions can be used to, for example, provide 1 metric per JMX ObjectName key property value. For example, QueueName, ThreadPoolName, or ConnectionPoolName. |
+| dimensions | String Array | Must contain "rx_pid" at index 0. This ensures that JMX attributes get the system process ID (PID) as a dimension. Additional dimensions can be used to, for example, provide 1 metric per JMX ObjectName key property value. For example, QueueName, ThreadPoolName, or ConnectionPoolName. Only  letters, numbers and "-" ,  "_" chars are allowed. |
 
 Available units: 
 NanoSecond, MicroSecond, MilliSecond, Second, Byte, KiloByte, MegaByte, BytePerSecond, BytePerMinute, KiloBytePerSecond, KiloBytePerMinute, MegaBytePerSecond, MegaBytePerMinute, Count, PerSecond, PerMinute
@@ -158,7 +158,7 @@ The keymetrics section is completely optional and allows you to define up to two
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| key | String | The key for the time series to put into the graphic |
+| key | String | The key for the time series to put into the graphic. Only letters, numbers and "-" , "_" chars are allowed. |
 | aggregation | String | ??? |
 | mergeaggregation | String | If the metric contains multiple dimensions, this defines how to aggregate the dimension values. into a single one.|
 | displayname | String | The name to display in the graphic |
