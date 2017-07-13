@@ -1,4 +1,4 @@
-# Ruxit JMX extensions
+# Dynatrace JMX extensions
 
 JMX extensions are defined by JSON files. The following describes how to use such JSON files.
 
@@ -31,7 +31,7 @@ Each JMX extension has the following mandatory properties:
 | type | String | Always use "JMX"
 | processTypes | Integer array | Always use [ 10, 12, 13, 16, 17, 18 ] |
 | entity| String | Always use "PROCESS_GROUP_INSTANCE" |
-| configUI.displayName | String | Human readable extension name. This name is displayed on the Ruxit Monitoring extensions page once the extension is uploaded.
+| configUI.displayName | String | Human readable extension name. This name is displayed on the Dynatrace Monitoring extensions page once the extension is uploaded.
 
 ## Metrics
 This part of the JSON defines which metrics are collected by the extension. Each metric is defined by JSON in a format similar to the following: 
@@ -83,7 +83,7 @@ Optional attributes are:
 | allowAdditionalKeys | Boolean | If this is false, the keyProperties need to match exactly. Additional keys in the name will lead to a mismatch. If true, then additional key properties beside those specified in "keyProperties" are allowed and ignored. |
 | calculateDelta | bool | If true, calculate the change in values of the given attribute. Value = attribute(t) - attribute(t-1). This is useful for monoto. |
 | calculateRate | bool | If true, calculate the rate of changes per seconds. This is used in combination with calculateDelta to convert an absolute attribute (eg. Request Count) to a rate (eg. Requests per Second). Value = attribute / query interval
-| aggregation | String | Ruxit captures a value every 10 seconds but only sends one aggregate value per minute. This specifies how to aggregate these 10 second values. It is also used to aggregate multiple values if more than 1 MBean matches the domain and key property filter. Possible values: SUM, AVG, MIN, MAX |
+| aggregation | String | Dynatrace captures a value every 10 seconds but only sends one aggregate value per minute. This specifies how to aggregate these 10 second values. It is also used to aggregate multiple values if more than 1 MBean matches the domain and key property filter. Possible values: SUM, AVG, MIN, MAX |
 | splitting | Object | Set details below |
 
 #### Splitting
@@ -206,7 +206,7 @@ A series has the following attributes:
 | mergeaggregation | String | Key charts do not show multiple dimensions. If the metric contains multiple dimensions, this defines how to aggregate the dimension values into a single dimension. |
 | color | String | HTML notation of a color (RGB or RGBA). |
 | seriestype | String | Chart type. Possible values are: line, area, and bar |
-| rightaxis | Boolean | If true, the metric will be placed on the right instead of the left axis. Note that Ruxit does support dual axis charts. |
+| rightaxis | Boolean | If true, the metric will be placed on the right instead of the left axis. Note that Dynatrace does support dual axis charts. |
 | stacked | Boolean | If true, then multiple metrics will be stacked upon each other. This only works for area and bar charts. |
 
 ## Plugin.json reference
