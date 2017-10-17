@@ -40,6 +40,7 @@ This part of the JSON defines which metrics are collected by the extension. Each
 		"timeseries": {
 			"key": "Queue.ConsumerCount",
 			"unit": "Count",
+			"displayname": "Queue Consumer Count",
 			"dimensions": [
 				"rx_pid"
 			]
@@ -62,6 +63,7 @@ This part specifies the metadata of a metric.
 | key | String | Metric name. Must be unique whithin this extension. Only  letters, numbers and "-" ,  "_" chars are allowed.|
 | unit | String | Metric unit. Must be one of the Available units described below |
 | dimensions | String Array | Must contain "rx_pid" at index 0. This ensures that JMX attributes get the system process ID (PID) as a dimension. Additional dimensions can be used to, for example, provide 1 metric per JMX ObjectName key property value. For example, QueueName, ThreadPoolName, or ConnectionPoolName. Only  letters, numbers and "-" ,  "_" chars are allowed. |
+| displayname | String | Metric display name represent metric in Dynatrace. This field is obligatory. Must be different than metric key.|
 
 Available units: 
 NanoSecond, MicroSecond, MilliSecond, Second, Byte, KiloByte, MegaByte, BytePerSecond, BytePerMinute, KiloBytePerSecond, KiloBytePerMinute, MegaBytePerSecond, MegaBytePerMinute, Count, PerSecond, PerMinute
@@ -113,6 +115,7 @@ The following sample shows how to define a metric that provides multiple timeser
 		"timeseries": {
 			"key": "XY.Size",
 			"unit": "Count",
+			"displayname": "Queue Consumer Count",
 			"dimensions": [
 				"rx_pid",
 				"name"
@@ -194,14 +197,14 @@ Both sections allow an array of charts to be defined. A chart has the following 
 | ----- | ---- | ----------- |
 | group | String | The section name that the chart should be put into |
 | title | String | The name of the chart |
-| series | Array | An array of timeseries and charting definitions. One chart can contain multiple metrics |
+| series | Array | An array of timeseries and charting definitions. One chart can contain multiple metrics. |
 
 A series has the following attributes:
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | key | String | The key for the time series to chart |
-| displayname | String | Display name to show for the metric |
+| displayname | String | Display name to show for the metric. Overwites metric displayname. Default: metric displayname.|
 | aggregation | String | How multiple minute values should be aggregated in charts when viewing a longer time frame. Possible values: SUM, AVG, MIN, MAX |
 | mergeaggregation | String | Key charts do not show multiple dimensions. If the metric contains multiple dimensions, this defines how to aggregate the dimension values into a single dimension. |
 | color | String | HTML notation of a color (RGB or RGBA). |
