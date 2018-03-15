@@ -12,7 +12,7 @@
       "timeseries": {
         "key": "Size",
         "unit": "Count",
-	"displayname": "Size",
+	      "displayname": "Size",
         "dimensions": [
           "rx_pid"
         ]
@@ -34,7 +34,7 @@
       "timeseries": {
         "key": "MaxActive",
         "unit": "Count",
-	"displayname": "MaxActive",
+	      "displayname": "MaxActive",
         "dimensions": [
           "rx_pid"
         ]
@@ -56,7 +56,7 @@
       "timeseries": {
         "key": "Active",
         "unit": "Count",
-	"displayname": "Active",
+	      "displayname": "Active",
         "dimensions": [
           "rx_pid"
         ]

@@ -10,6 +10,7 @@
       "timeseries" :
       {
         "key" : "busyThreads",
+        "displayname" : "busy Threads",
         "unit" : "Count",
         "dimensions" : [
           "rx_pid"
@@ -32,6 +33,7 @@
       "timeseries" :
       {
         "key" : "idleThreads",
+        "displayname" : "idle Threads",
         "unit" : "Count",
         "dimensions" : [
           "rx_pid"
@@ -53,6 +55,7 @@
     {
       "timeseries": {
         "key": "queueSize",
+        "displayname" : "queue Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid"
@@ -74,6 +77,7 @@
     {
       "timeseries": {
         "key": "requestCount",
+        "displayname" : "request Count",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
@@ -95,6 +99,7 @@
     {
       "timeseries": {
         "key": "responsesBytesTotal",
+        "displayname" : "responses Bytes Total",
         "unit": "BytePerSecond",
         "dimensions": [
           "rx_pid"
@@ -116,6 +121,7 @@
     {
       "timeseries": {
         "key": "connections",
+        "displayname" : "connections",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
@@ -138,6 +144,7 @@
     {
       "timeseries": {
         "key": "connectionsOpen",
+        "displayname" : "connections Open",
         "unit": "Count",
         "dimensions": [
           "rx_pid"

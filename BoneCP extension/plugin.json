@@ -11,6 +11,7 @@
     {
       "timeseries": {
         "key": "TotalCreatedConnections",
+        "displayname": "Total Created Connections",
         "unit": "Count",
         "dimensions": [
           "rx_pid"
@@ -31,6 +32,7 @@
     {
       "timeseries": {
         "key": "TotalLeased",
+        "displayname" : "Total Leased",
         "unit": "Count",
         "dimensions": [
           "rx_pid"
@@ -51,6 +53,7 @@
     {
       "timeseries": {
         "key": "ConnectionsRequested",
+        "displayname" : "Connections Requested",
         "unit": "Count",
         "dimensions": [
           "rx_pid"

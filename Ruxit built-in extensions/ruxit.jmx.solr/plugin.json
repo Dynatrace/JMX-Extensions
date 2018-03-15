@@ -13,6 +13,7 @@
 	{
 		"timeseries": {
 			"key": "searcher.deletedDocs",
+			"displayname" : "searcher deleted Docs",
 			"unit": "Count",
 			"dimensions": ["rx_pid"]
 		},
@@ -32,6 +33,7 @@
 	{
 		"timeseries": {
 			"key": "searcher.maxDoc",
+			"displayname" : "searcher max Doc",
 			"unit": "Count",
 			"dimensions": ["rx_pid"]
 		},
@@ -51,6 +53,7 @@
 	{
 		"timeseries": {
 			"key": "searcher.numDocs",
+			"displayname": "searcher num Docs",
 			"unit": "Count",
 			"dimensions": ["rx_pid"]
 		},
@@ -70,6 +73,7 @@
     {
       "timeseries": {
         "key": "update.adds",
+        "displayname": "update adds",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
@@ -91,6 +95,7 @@
     {
       "timeseries": {
         "key": "update.deletesById",
+        "displayname": "update deletes By Id",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
@@ -112,6 +117,7 @@
     {
       "timeseries": {
         "key": "update.deletesByQuery",
+        "displayname": "update deletes By Query",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
@@ -133,6 +139,7 @@
     {
       "timeseries": {
         "key": "update.errors",
+        "displayname": "update errors",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
@@ -154,6 +161,7 @@
 	{
 		"timeseries": {
 			"key": "documentCache.evictions",
+			"displayname": "document Cache evictions",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -173,6 +181,7 @@
 	{
 		"timeseries": {
 			"key": "documentCache.hits",
+			"displayname": "document Cache hits",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -192,6 +201,7 @@
 	{
 		"timeseries": {
 			"key": "documentCache.inserts",
+			"displayname": "document Cache inserts",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -211,6 +221,7 @@
 	{
 		"timeseries": {
 			"key": "documentCache.lookups",
+			"displayname": "document Cache lookups",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -230,6 +241,7 @@
 	{
 		"timeseries": {
 			"key": "queryResultCache.evictions",
+			"displayname": "query Result Cache evictions",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -249,6 +261,7 @@
 	{
 		"timeseries": {
 			"key": "queryResultCache.hits",
+			"displayname": "query Result Cache hits",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -268,6 +281,7 @@
 	{
 		"timeseries": {
 			"key": "queryResultCache.inserts",
+			"displayname": "query Result Cache inserts",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -287,6 +301,7 @@
 	{
 		"timeseries": {
 			"key": "queryResultCache.lookups",
+			"displayname": "query Result Cache lookups",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -306,6 +321,7 @@
 	{
 		"timeseries": {
 			"key": "filterCache.evictions",
+			"displayname": "filter Cache evictions",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -325,6 +341,7 @@
 	{
 		"timeseries": {
 			"key": "filterCache.hits",
+			"displayname": "filterCache hits",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -344,6 +361,7 @@
 	{
 		"timeseries": {
 			"key": "filterCache.inserts",
+			"displayname": "filter Cache inserts",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -363,6 +381,7 @@
 	{
 		"timeseries": {
 			"key": "filterCache.lookups",
+			"displayname": "filter Cache lookups",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -382,6 +401,7 @@
 	{
 		"timeseries": {
 			"key": "fieldValueCache.evictions",
+			"displayname": "field Value Cache evictions",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -401,6 +421,7 @@
 	{
 		"timeseries": {
 			"key": "fieldValueCache.hits",
+			"displayname": "field Value Cache hits",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -420,6 +441,7 @@
 	{
 		"timeseries": {
 			"key": "fieldValueCache.inserts",
+			"displayname": "field Value Cache inserts",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -439,6 +461,7 @@
 	{
 		"timeseries": {
 			"key": "fieldValueCache.lookups",
+			"displayname": "field Value Cache lookups",
 			"unit": "PerSecond",
 			"dimensions": ["rx_pid"]
 		},
@@ -458,6 +481,7 @@
     {
       "timeseries": {
         "key": "select.requests",
+        "displayname": "select requests",
         "unit": "PerSecond",
         "dimensions": [
           "rx_pid"
