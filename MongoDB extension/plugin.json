@@ -11,6 +11,7 @@
     {
       "timeseries": {
         "key": "CheckedOutCount",
+        "displayname" : "Checked Out Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -40,6 +41,7 @@
     {
       "timeseries": {
         "key": "MaxSize",
+        "displayname" : "Max Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -69,6 +71,7 @@
     {
       "timeseries": {
         "key": "Size",
+        "displayname" : "Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -98,6 +101,7 @@
     {
       "timeseries": {
         "key": "WaitQueueSize",
+        "displayname" : "Wait Queue Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid",

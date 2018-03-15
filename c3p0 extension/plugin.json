@@ -11,6 +11,7 @@
     {
       "timeseries": {
         "key": "maxPoolSize",
+        "displayname" : "max Pool Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -37,6 +38,7 @@
     {
       "timeseries": {
         "key": "numConnections",
+        "displayname" : "num Connections",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -63,6 +65,7 @@
     {
       "timeseries": {
         "key": "numBusyConnections",
+        "displayname" : "num Busy Connections",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -89,6 +92,7 @@
     {
       "timeseries": {
         "key": "numUnclosedOrphanedConnections",
+        "displayname" : "num Unclosed Orphaned Connections",
         "unit": "Count",
         "dimensions": [
           "rx_pid",

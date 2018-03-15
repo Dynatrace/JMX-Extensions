@@ -18,6 +18,7 @@
         {
             "timeseries": {
                 "key": "Queue.ConsumerCount",
+                "displayname" : "Queue Consumer Count",
                 "unit": "Count",
                 "dimensions": [
                     "rx_pid",
@@ -46,6 +47,7 @@
         {
             "timeseries": {
                 "key": "Queue.MessageCount",
+                "displayname" : "Queue Message Count",
                 "unit": "Count",
                 "dimensions": [
                     "rx_pid",
@@ -74,6 +76,7 @@
         {
             "timeseries": {
                 "key": "Queue.ScheduledCount",
+                "displayname" : "Queue Scheduled Count",
                 "unit": "Count",
                 "dimensions": [
                     "rx_pid",
@@ -102,6 +105,7 @@
         {
             "timeseries": {
                 "key": "Queue.DeliveringCount",
+                "displayname" : "Queue Delivering Count",
                 "unit": "Count",
                 "dimensions": [
                     "rx_pid",
@@ -130,6 +134,7 @@
         {
             "timeseries": {
                 "key": "Queue.MessagesAdded",
+                "displayname" : "Queue Messages Added",
                 "unit": "Count",
                 "dimensions": [
                     "rx_pid",

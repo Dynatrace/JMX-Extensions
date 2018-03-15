@@ -12,6 +12,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient_Failed",
+                "displayname" : "Discovery Client Failed",
                 "unit": "Count",
                 "dimensions": ["rx_pid"]
             },
@@ -32,6 +33,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient_Reregister",
+                "displayname" : "Discovery Client Reregister",
                 "unit": "Count",
                 "dimensions": ["rx_pid"]
             },
@@ -52,6 +54,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient_Retry",
+                "displayname" : "Discovery Client Retry",
                 "unit": "Count",
                 "dimensions": ["rx_pid"]
             },
@@ -72,6 +75,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_count",
+                "displayname" : "DiscoveryClient - HTTPClient RequestConnectionTimer count",
                 "unit": "Count",
                 "dimensions": ["rx_pid"]
             },
@@ -94,6 +98,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_max",
+                "displayname" : "DiscoveryClient - HTTPClient RequestConnectionTimer max",
                 "unit": "MilliSecond",
                 "dimensions": ["rx_pid"]
             },
@@ -116,6 +121,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_min",
+                "displayname" : "DiscoveryClient - HTTPClient RequestConnectionTimer min",
                 "unit": "MilliSecond",
                 "dimensions": ["rx_pid"]
             },
@@ -138,6 +144,7 @@
         {
             "timeseries": {
                 "key": "DiscoveryClient-HTTPClient_RequestConnectionTimer_totalTime",
+                "displayname" : "DiscoveryClient - HTTPClient RequestConnectionTimer totalTime",
                 "unit": "MilliSecond",
                 "dimensions": ["rx_pid"]
             },
@@ -160,6 +167,7 @@
         {
             "timeseries": {
                 "key": "ZoneStats_CircuitBreakerTrippedCount",
+                "displayname" : "Zone Stats Circuit Breaker Tripped Count",
                 "unit": "Count",
                 "dimensions": ["rx_pid", "id"]
             },
@@ -187,6 +195,7 @@
         {
             "timeseries": {
                 "key": "ZoneStats_InstanceCount",
+                "displayname" : "Zone Stats Instance Count",
                 "unit": "Count",
                 "dimensions": ["rx_pid", "id"]
             },

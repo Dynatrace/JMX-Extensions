@@ -10,6 +10,7 @@
       "timeseries" :
       {
         "key" : "tomcat.currentThreadsBusy",
+        "displayname" : "tomcat current Threads Busy",
         "unit" : "Count",
         "dimensions" : [
           "rx_pid",
@@ -22,6 +23,7 @@
       "timeseries" :
       {
         "key" : "tomcat.currentThreadsIdle",
+        "displayname" : "tomcat current Threads Idle",
         "unit" : "Count",
         "dimensions" : [
           "rx_pid",
@@ -34,6 +36,7 @@
       "timeseries" :
       {
         "key" : "tomcat.bytesReceivedPerSecond",
+        "displayname" : "tomcat bytes Received Per Second",
         "unit" : "BytePerSecond",
         "dimensions" : [
           "rx_pid",
@@ -46,6 +49,7 @@
       "timeseries" :
       {
         "key" : "tomcat.bytesSentPerSecond",
+        "displayname" : "tomcat bytes Sent Per Second",
         "unit" : "BytePerSecond",
         "dimensions" : [
           "rx_pid",
@@ -58,6 +62,7 @@
       "timeseries" :
       {
         "key" : "tomcat.requestCountPerSecond",
+        "displayname" : "tomcat request Count Per Second",
         "unit" : "PerSecond",
         "dimensions" : [
           "rx_pid",

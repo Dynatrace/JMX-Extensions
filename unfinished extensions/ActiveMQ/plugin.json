@@ -11,6 +11,7 @@
     {
       "timeseries": {
         "key": "Topic.AverageMessageSize",
+        "displayname" : "Topic Average Message Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -40,6 +41,7 @@
     {
       "timeseries": {
         "key": "Topic.ConsumerCount",
+        "displayname" : "Topic Consumer Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -69,6 +71,7 @@
     {
       "timeseries": {
         "key": "DequeueCount",
+        "displayname" : "Dequeue Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -98,6 +101,7 @@
     {
       "timeseries": {
         "key": "DispatchCount",
+        "displayname" : "Dispatch Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -127,6 +131,7 @@
     {
       "timeseries": {
         "key": "EnqueueCount",
+        "displayname" : "Enqueue Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -156,6 +161,7 @@
     {
       "timeseries": {
         "key": "InFlightCount",
+        "displayname" : "In Flight Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -185,6 +191,7 @@
     {
       "timeseries": {
         "key": "ExpiredCount",
+        "displayname" : "Expired Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -214,6 +221,7 @@
     {
       "timeseries": {
         "key": "ProducerCount",
+        "displayname" : "Producer Count",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
@@ -243,6 +251,7 @@
     {
       "timeseries": {
         "key": "QueueSize",
+        "displayname" : "Queue Size",
         "unit": "Count",
         "dimensions": [
           "rx_pid",
