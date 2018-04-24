@@ -10,7 +10,6 @@ An extension consists of 3 main elements: metadata, metrics, and UI config. The 
 		"version": "1.0",
 		"name": "custom.jmx.hornetq",
 		"type": "JMX",
-		"processTypes": [ 10, 12, 13, 16, 17, 18 ],	
 		"entity": "PROCESS_GROUP_INSTANCE",
 		"configUI" : {
 			"displayName": "HornetQ JMX"
@@ -29,7 +28,6 @@ Each JMX extension has the following mandatory properties:
 | version | String | The extension version in format "d.dd", must be updated whenever the extension definition is updated |
 | name | String | A unique extension name in Java package format. Custom jmx plugins names should follow custom.jmx.name rule. In name  only letters, numbers and "-" ,  "_" chars are allowed for example  custom.jmx.newPlugin-Ver2 |
 | type | String | Always use "JMX"
-| processTypes | Integer array | Always use [ 10, 12, 13, 16, 17, 18 ] |
 | entity| String | Always use "PROCESS_GROUP_INSTANCE" |
 | configUI.displayName | String | Human readable extension name. This name is displayed on the Dynatrace Monitoring extensions page once the extension is uploaded.
 
