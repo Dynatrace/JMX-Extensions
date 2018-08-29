@@ -140,16 +140,16 @@ For example, MBeans com.sample:type=XY,name=A and com.sample:type=XY,name=B will
 
 This part of the JSON defines how metrics are charted on the process page. It contains a mandatory charts section and an optional keycharts section. Each section has the same format and looks like this:
 
-	{
-		"keymetrics" : [
-		    {
-			"key" : "requestCount",
-			"aggregation" : "avg",
-			"mergeaggregation" : "sum",
-			"displayname" : "Requests"
-		    }
-		],		
+	{		
 		"ui": {
+			"keymetrics" : [
+		     {
+					"key" : "requestCount",
+					"aggregation" : "avg",
+					"mergeaggregation" : "sum",
+					"displayname" : "Requests"
+		     }
+			],
 			"keycharts" : [ ],
 			"charts": [ ]
 		}
