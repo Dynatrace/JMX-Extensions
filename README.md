@@ -46,7 +46,7 @@ This part of the JSON defines which metrics are collected by the extension. Each
 		"source": {
 			"domain": "org.hornetq",
 			"keyProperties": {
-				"type": "Queue",
+				"type": "Queue"
 			},
 			"attribute": "ConsumerCount"
 		}
