@@ -160,7 +160,7 @@ The keymetrics section is completely optional and allows you to define up to two
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | key | String | The key for the time series to put into the graphic. Only letters, numbers and "-" , "_" chars are allowed. |
-| aggregation | String | ??? |
+| aggregation | String | Aggregation defines the method to aggregate the minute values when working in a longer timeframe. |
 | mergeaggregation | String | If the metric contains multiple dimensions, this defines how to aggregate the dimension values. into a single one.|
 | displayname | String | The name to display in the graphic |
 
