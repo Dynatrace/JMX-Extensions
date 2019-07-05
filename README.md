@@ -11,6 +11,7 @@ An extension consists of 3 main elements: metadata, metrics, and UI config. The 
 		"name": "custom.jmx.hornetq",
 		"type": "JMX",
 		"entity": "PROCESS_GROUP_INSTANCE",
+		"metricGroup": "tech.HornetQ",
 		"configUI" : {
 			"displayName": "HornetQ JMX"
 		},
@@ -29,6 +30,7 @@ Each JMX extension has the following mandatory properties:
 | name | String | A unique extension name in Java package format. Custom jmx plugins names should follow custom.jmx.name rule. In name  only letters, numbers and "-" ,  "_" chars are allowed for example  custom.jmx.newPlugin-Ver2 |
 | type | String | Always use "JMX"
 | entity| String | Always use "PROCESS_GROUP_INSTANCE" |
+| metricGroup| String | Metric group is used for grouping custom metrics into a hierarchical namespace where different sources, for example multiple plugins can contribute. Moreover, metric group becomes primary part of metric key. Hence once defined it could not be changed. Allowed characters are: letters, numbers and "-" ,  "_" |
 | configUI.displayName | String | Human readable extension name. This name is displayed on the Dynatrace Monitoring extensions page once the extension is uploaded.
 
 ## Metrics

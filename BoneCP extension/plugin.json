@@ -1,8 +1,9 @@
 {
-  "version": "0.1",
-  "name": "bonecp.jmx",
+  "version": "0.2",
+  "name": "custom.bonecp.jmx",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
+  "metricGroup": "tech.BoneCP",
   "processTypes": [10],
   "configUI" : {
     "displayName": "BoneCP JMX"

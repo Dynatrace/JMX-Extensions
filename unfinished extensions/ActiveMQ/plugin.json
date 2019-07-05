@@ -1,7 +1,8 @@
 {
-  "version": "1.07",
-  "name": "jmx.ActiveMQ",
+  "version": "1.08",
+  "name": "custom.jmx.ActiveMQ",
   "type": "JMX",
+  "metricGroup": "tech.ActiveMQ",
   "processTypes":  [ 10, 12, 13, 16, 17, 18 ],
   "entity": "PROCESS_GROUP_INSTANCE",
     "configUI" : {

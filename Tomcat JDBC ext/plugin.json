@@ -1,8 +1,9 @@
 {
-  "version": "1.3",
+  "version": "1.4",
   "name": "custom.jmx.tomcat.jdbc.pool",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
+  "metricGroup": "tech.tomcat.Connection_Pool",
   "processTypes": [10, 12, 13, 16, 17, 18],
     "configUI" : {
         "displayName": "Tomcat Connection Pool JMX"

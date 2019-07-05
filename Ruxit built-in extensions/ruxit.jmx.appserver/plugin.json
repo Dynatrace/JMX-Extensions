@@ -1,9 +1,10 @@
 
 {
-  "version" : "1.790",
+  "version" : "1.791",
   "name" : "ruxit.jmx.appserver",
   "type" : "JMX",
   "entity" : "PROCESS_GROUP_INSTANCE",
+  "metricGroup": "tech.tomcat",
   "processTypes":[10,12,16],
   "metrics" : [
     {

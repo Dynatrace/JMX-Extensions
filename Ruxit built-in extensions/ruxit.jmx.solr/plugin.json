@@ -1,7 +1,8 @@
 {
-	"version": "1.791",
+	"version": "1.792",
 	"name": "ruxit.jmx.solr",
 	"type": "JMX",
+	"metricGroup": "tech.Solr",
 	"entity": "PROCESS_GROUP_INSTANCE",
 	"processTypes": [10],
 	

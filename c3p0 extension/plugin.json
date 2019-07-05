@@ -1,8 +1,9 @@
 {
-  "version": "1.01",
-  "name": "jmx.c3p0",
+  "version": "1.02",
+  "name": "custom.jmx.c3p0",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
+  "metricGroup": "tech.c3p0",
   "processTypes": [10, 12, 13, 16, 17, 18],
     "configUI" : {
         "displayName": "c3p0 JMX"

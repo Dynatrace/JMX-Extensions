@@ -1,7 +1,8 @@
 {
-  "version": "0.4",
-  "name": "mongodb.jmx",
+  "version": "0.5",
+  "name": "custom.mongodb.jmx",
   "type": "JMX",
+  "metricGroup": "tech.MongoDB",
   "entity": "PROCESS_GROUP_INSTANCE",
   "processTypes": [10],
   "configUI" : {

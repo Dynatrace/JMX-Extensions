@@ -1,7 +1,8 @@
 {
-    "version": "1.792",
+    "version": "1.793",
     "name": "ruxit.jmx.hornetq",
     "type": "JMX",
+    "metricGroup": "tech.HornetQ",
     "processTypes": [
         10,
         12,

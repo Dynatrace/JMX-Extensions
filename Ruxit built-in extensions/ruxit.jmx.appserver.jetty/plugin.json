@@ -1,8 +1,9 @@
 
 {
-  "version" : "1.790",
+  "version" : "1.791",
   "name" : "ruxit.jmx.appserver.jetty",
   "type" : "JMX",
+  "metricGroup": "tech.Jetty",
   "entity": "PROCESS_GROUP_INSTANCE",
   "processTypes":[10],
   "metrics" : [
