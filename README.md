@@ -85,7 +85,7 @@ Optional attributes are:
 | allowAdditionalKeys | Boolean | If this is false, the keyProperties need to match exactly. Additional keys in the name will lead to a mismatch. If true, then additional key properties beside those specified in "keyProperties" are allowed and ignored. |
 | calculateDelta | bool | If true, calculate the change in values of the given attribute. Value = attribute(t) - attribute(t-1). This is useful for monoto. |
 | calculateRate | bool | If true, calculate the rate of changes per seconds. This is used in combination with calculateDelta to convert an absolute attribute (eg. Request Count) to a rate (eg. Requests per Second). Value = attribute / query interval
-| aggregation | String | Dynatrace captures a value every 10 seconds but only sends one aggregate value per minute. This specifies how to aggregate these 10 second values. It is also used to aggregate multiple values if more than 1 MBean matches the domain and key property filter. Possible values: SUM, AVG, MIN, MAX |
+| aggregation | String | It is used to aggregate multiple values if more than 1 MBean matches the domain and key property filter. Possible values: SUM, AVG, MIN, MAX |
 | splitting | Object | Set details below |
 
 #### Splitting
@@ -162,7 +162,7 @@ The keymetrics section is completely optional and allows you to define up to two
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | key | String | The key for the time series to put into the graphic. Only letters, numbers and "-" , "_" chars are allowed. |
-| aggregation | String | Aggregation defines the method to aggregate the minute values when working in a longer timeframe. |
+| aggregation | String | Aggregation defines the method to aggregate the minute values when working in a longer timeframe. Dynatrace captures a value every 10 seconds but only sends one aggregate value per minute. This specifies how to aggregate these 10 second values. |
 | mergeaggregation | String | If the metric contains multiple dimensions, this defines how to aggregate the dimension values. into a single one.|
 | displayname | String | The name to display in the graphic |
 
