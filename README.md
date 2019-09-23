@@ -45,6 +45,20 @@ This part of the JSON defines which metrics are collected by the extension. Each
 				"rx_pid"
 			]
 		},
+		"alert_settings": [
+			{
+				"alert_id": "too_many_conumers",
+				"event_type": "PERFORMANCE_EVENT",
+				"event_name": "Too many consumers",
+				"description": "The {metricname} of {severity} is {alert_condition} the threshold of {threshold}",
+				"threshold": 35.0,
+				"alert_condition": "ABOVE",
+				"samples":5,
+				"violating_samples":3,
+				"dealerting_samples":5,
+				"value_extractor": "MAX"
+			}
+		]
 		"source": {
 			"domain": "org.hornetq",
 			"keyProperties": {
@@ -67,6 +81,23 @@ This part specifies the metadata of a metric.
 
 Available units: 
 NanoSecond, MicroSecond, MilliSecond, Second, Byte, KiloByte, MegaByte, BytePerSecond, BytePerMinute, KiloBytePerSecond, KiloBytePerMinute, MegaBytePerSecond, MegaBytePerMinute, Count, PerSecond, PerMinute
+
+### Alert settings
+
+This part specifies configuration of one ore more alert for a given timeseries.
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| alert_id | String | Unique alert id. Only letters, numbers and "-" , "_" chars are allowed in alert_id. |
+| event_type | String | String Allowed types: PERFORMANCE_EVENT, ERROR_EVENT, AVAILABILITY_EVENT. |
+| description | String | Description defines alert message, following code snippets could be used: {threshold} the value of the custom threshold that was violated {severity} the violating value {entityname} the display name of the entity where the metric violated {violating_samples} the number of violating samples that led to that event {dimensions} a string containg the violating dimensions of the metric {alert_condition} a string showing if above or below threshold is alerting |
+| event_name | String | Event name displayed on UI pages. |
+| threshold | Float | The value of the threshold. |
+| alert_condition | String | ABOVE or BELOW. |
+| samples | Integer | Size of the “window” in which violating_samples are counted. |
+| violating_samples | Integer | The number of violating samples that rise an alert. |
+| dealerting_samples | Integer | The number of not violating samples that deactivate the alert. |
+| value_extractor | String | Dynatrace captures a value every 10 seconds but only sends one aggregate value per minute. This specifies how to aggregate these 10 second values. Possible values: MIN, MAX, SUM, COUNT, AVG, MEDIAN, P90. Defaults to AVG |
 
 ### Source
 
