@@ -1,0 +1,205 @@
+{
+  "version": "0.1",
+  "name": "custom.jmx.Hikari",
+  "type": "JMX",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "configUI": {
+    "displayName": "Hikari Thread Pool"
+  },
+  "processTypes": [
+    10,
+    12,
+    13,
+    16,
+    17,
+    18
+  ],
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "ActiveConnections",
+        "unit": "Count",
+        "displayname": "Active Connections",
+        "dimensions": [
+          "rx_pid",
+          "type"
+        ]
+      },
+      "source": {
+        "domain": "com.zaxxer.hikari",
+        "keyProperties": {
+          "type": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "ActiveConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "type",
+          "type": "keyProperty",
+          "keyProperty": "type"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "IdleConnections",
+        "unit": "Count",
+        "displayname": "Idle Connections",
+        "dimensions": [
+          "rx_pid",
+          "type"
+        ]
+      },
+      "source": {
+        "domain": "com.zaxxer.hikari",
+        "keyProperties": {
+          "type": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "IdleConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "type",
+          "type": "keyProperty",
+          "keyProperty": "type"
+        }
+      }
+    },
+	{
+      "timeseries": {
+        "key": "MaximumPoolSize",
+        "unit": "Count",
+        "displayname": "Maximum Pool Size",
+        "dimensions": [
+          "rx_pid",
+          "type"
+        ]
+      },
+      "source": {
+        "domain": "com.zaxxer.hikari",
+        "keyProperties": {
+          "type": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "MaximumPoolSize",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "type",
+          "type": "keyProperty",
+          "keyProperty": "type"
+        }
+      }
+    },
+	{
+      "timeseries": {
+        "key": "ThreadsAwaitingConnection",
+        "unit": "Count",
+        "displayname": "Threads Awaiting Connection",
+        "dimensions": [
+          "rx_pid",
+          "type"
+        ]
+      },
+      "source": {
+        "domain": "com.zaxxer.hikari",
+        "keyProperties": {
+          "type": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "ThreadsAwaitingConnection",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "type",
+          "type": "keyProperty",
+          "keyProperty": "type"
+        }
+      }
+    },
+	{
+      "timeseries": {
+        "key": "TotalConnections",
+        "unit": "Count",
+        "displayname": "Total Connections",
+        "dimensions": [
+          "rx_pid",
+          "type"
+        ]
+      },
+      "source": {
+        "domain": "com.zaxxer.hikari",
+        "keyProperties": {
+          "type": "*"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "TotalConnections",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM",
+        "splitting": {
+          "name": "type",
+          "type": "keyProperty",
+          "keyProperty": "type"
+        }
+      }
+    }
+  ],
+  "ui": {
+    "charts": [
+      {
+        "group": "HikariCP",
+        "title": "Connection Pool",
+        "series": [
+          {
+            "key": "ActiveConnections",
+            "displayname": "Active Connections",
+            "seriestype": "line",
+            "color": "#42f4ce",
+            "rightaxis": false
+          },
+          {
+            "key": "IdleConnections",
+            "displayname": "Idle Connections",
+            "seriestype": "line",
+            "color": "#f4ee41",
+            "rightaxis": false
+          },
+		  {
+            "key": "TotalConnections",
+            "displayname": "Total Connections",
+            "seriestype": "line",
+            "color": "#417ff4",
+            "rightaxis": false
+          }
+        ]
+      },
+	  {
+        "group": "HikariCP",
+        "title": "Thread Pool",
+        "series": [
+          {
+            "key": "MaximumPoolSize",
+            "displayname": "Max Pool Size",
+            "seriestype": "line",
+            "color": "#417ff4",
+            "rightaxis": false
+          },
+          {
+            "key": "ThreadsAwaitingConnection",
+            "displayname": "Waiting Threads",
+            "seriestype": "area",
+            "color": "#f4ee41",
+            "rightaxis": false
+          }
+        ]
+      }
+    ]
+  }
+}
