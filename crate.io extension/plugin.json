@@ -1,0 +1,338 @@
+{
+  "version": "1.7",
+  "name": "custom.jmx.crate.io",
+  "type": "JMX",
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "configUI": {
+    "displayname": "CrateDB"
+  },
+  "processTypes": [
+    10,
+    12,
+    13,
+    16,
+    17,
+    18
+  ],
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "DeleteQueryAverageDuration",
+        "displayname": "Delete duration",
+        "unit": "MilliSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "DeleteQueryAverageDuration",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "DeleteQueryFrequency",
+        "displayname": "Delete frequency",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "DeleteQueryFrequency",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "InsertQueryAverageDuration",
+        "displayname": "Insert duration",
+        "unit": "MilliSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "InsertQueryAverageDuration",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "InsertQueryFrequency",
+        "displayname": "Insert frequency",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "InsertQueryFrequency",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "OverallQueryAverageDuration",
+        "displayname": "Overall query duration",
+        "unit": "MilliSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "OverallQueryAverageDuration",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "OverallQueryFrequency",
+        "displayname": "Overall query frequency",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "OverallQueryFrequency",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "SelectQueryAverageDuration",
+        "displayname": "Select duration",
+        "unit": "MilliSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "SelectQueryAverageDuration",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "SelectQueryFrequency",
+        "displayname": "Select frequency",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "SelectQueryFrequency",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "UpdateQueryAverageDuration",
+        "displayname": "Update duration",
+        "unit": "MilliSecond",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "UpdateQueryAverageDuration",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "UpdateQueryFrequency",
+        "displayname": "Update frequency",
+        "unit": "Count",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "io.crate.monitoring",
+        "keyProperties": {
+          "type": "QueryStats"
+        },
+        "allowAdditionalKeys": false,
+        "attribute": "UpdateQueryFrequency",
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "SUM"
+      }
+    }
+  ],
+    "ui" :
+    {
+            "keymetrics" : [
+                    {
+                    "key" : "OverallQueryFrequency",
+                    "aggregation" : "avg",
+                    "mergeaggregation" : "sum",
+                    "displayname" : "Query frequency"
+                    },
+                    {
+                    "key" : "OverallQueryAverageDuration",
+                    "aggregation" : "avg",
+                    "mergeaggregation" : "sum",
+                    "displayname" : "Query duration"
+                    }
+            ],
+            "keycharts" : [ 
+                {
+                    "group": "CrateDB",
+                    "title": "Overall",
+                    "series": [
+                     {
+                            "key": "OverallQueryAverageDuration",
+                            "aggregation": "avg",
+                            "displayname": "Overall duration",
+                            "seriestype": "area"
+                     },
+                     {
+                            "key": "OverallQueryFrequency",
+                            "aggregation": "avg",
+                            "displayname": "Overall frequency",
+                            "seriestype": "area"
+                     }
+                     ]
+                },
+                {
+                    "group": "CrateDB",
+                    "title": "Insert",
+                    "series": [
+                     {
+                            "key": "InsertQueryAverageDuration",
+                            "aggregation": "avg",
+                            "displayname": "Insert duration",
+                            "seriestype": "area"
+                     },
+                     {
+                            "key": "InsertQueryFrequency",
+                            "aggregation": "avg",
+                            "displayname": "Insert frequency",
+                            "seriestype": "area"
+                     }
+                     ]
+                },
+                {
+                    "group": "CrateDB",
+                    "title": "Select",
+                    "series": [
+                     {
+                            "key": "SelectQueryAverageDuration",
+                            "aggregation": "avg",
+                            "displayname": "Select duration",
+                            "seriestype": "area"
+                     },
+                     {
+                            "key": "SelectQueryFrequency",
+                            "aggregation": "avg",
+                            "displayname": "Select frequency",
+                            "seriestype": "area"
+                     }
+                     ]
+                },
+                {
+                    "group": "CrateDB",
+                    "title": "Update",
+                    "series": [
+                     {
+                            "key": "UpdateQueryAverageDuration",
+                            "aggregation": "avg",
+                            "displayname": "Update duration",
+                            "seriestype": "area"
+                     },
+                     {
+                            "key": "UpdateQueryFrequency",
+                            "aggregation": "avg",
+                            "displayname": "Update frequency",
+                            "seriestype": "area"
+                     }
+                    ]
+                },            
+                {
+                    "group": "CrateDB",
+                    "title": "Delete",
+                    "series": [
+                     {
+                            "key": "DeleteQueryAverageDuration",
+                            "aggregation": "avg",
+                            "displayname": "Delete duration",
+                            "seriestype": "area"
+                     },
+                     {
+                            "key": "DeleteQueryFrequency",
+                            "aggregation": "avg",
+                            "displayname": "Delete frequency",
+                            "seriestype": "area"
+                     }
+                     ]
+                }
+            ]
+    }  
+}
