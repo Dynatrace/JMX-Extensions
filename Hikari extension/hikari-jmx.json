@@ -3,6 +3,7 @@
   "name": "custom.jmx.Hikari",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
+  "metricGroup": "tech.hikari",
   "configUI": {
     "displayName": "Hikari Thread Pool"
   },
